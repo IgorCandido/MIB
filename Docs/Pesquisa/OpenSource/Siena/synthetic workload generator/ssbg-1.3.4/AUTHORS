@@ -1,0 +1,23 @@
+The Siena Synthetic Benchmark Generator was developed by:
+
+	Antonio Carzaniga <carzanig@cs.colorado.edu>
+	Jing Deng <jing.deng@colorado.edu>
+	Matthew J. Rutherford <rutherfo@cs.colorado.edu>
+	Alexander L. Wolf <alw@cs.colorado.edu>
+
+ACKNOWLEDGMENTS
+
+The authors would like to thank David Rosenblum for the numerous
+discussions that helped shape and refine the ideas underlying this
+work.  This work was supported in part by the Defense Advanced
+Research Projects Agency, Air Force Research Laboratory, Space and
+Naval Warfare System Center, and Army Research Office under agreement
+numbers F30602-01-1-0503, F30602-00-2-0608, N66001-00-1-8945, and
+DAAD19-01-1-0484.  The U.S. Government is authorized to reproduce and
+distribute reprints for Governmental purposes notwithstanding any
+copyright annotation thereon. The views and conclusions contained
+herein are those of the authors and should not be interpreted as
+necessarily representing the official policies or endorsements, either
+expressed or implied, of the Defense Advanced Research Projects
+Agency, Air Force Research Laboratory, Space and Naval Warfare System
+Center, Army Research Office, or the U.S.  Government.

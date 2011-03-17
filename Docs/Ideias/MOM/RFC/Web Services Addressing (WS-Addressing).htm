@@ -1,0 +1,1680 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0043)http://www.w3.org/Submission/ws-addressing/ -->
+<html xml:lang="en-us" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Web Services Addressing (WS-Addressing)</title><style type="text/css">
+					.MsoToc1
+					        {margin:0in;
+					         margin-left:0in;}
+					.MsoToc2
+					        {margin:0in;
+					         margin-left:.25in;}
+					.MsoToc3
+					        {margin:0in;
+					         margin-left:.5in;}
+					.LabelEmbedded
+					        {font-weight:bold}
+					.TextIndented
+								{margin-left:.25in}
+					span.CodeEmbedded
+					        {font-family:"Courier New", monospace;}
+		        pre.Code, p.Code, li.Code, div.Code
+					        {margin-top:0in;
+					        margin-right:0in;
+					        margin-bottom:0pt;
+					        margin-left:0in;
+					        line-height:15.0pt;
+					        background:#E0E0E0;
+					        font-size:10.0pt;
+					        font-family:"Courier New", monospace;
+					        color:black;}
+		        span.Code
+					        {background:#E0E0E0;
+					        font-size:10.0pt;
+					        font-family:"Courier New", monospace;
+					        color:black;}
+					th {text-align:left}
+					dt {font-weight:normal}
+				</style>
+<link rel="stylesheet" type="text/css" href="./Web Services Addressing (WS-Addressing)_files/W3C-Member-SUBM.css"></head>
+<body>
+<div class="head">
+<p><a href="http://www.w3.org/"><img alt="W3C" src="./Web Services Addressing (WS-Addressing)_files/w3c_home" height="48" width="72"></a> <a href="http://www.w3.org/Submission/"><img src="./Web Services Addressing (WS-Addressing)_files/member_subm" alt="W3C Member Submission" height="48" width="211"></a></p>
+<h1><a id="title" name="title">Web Services Addressing (WS-Addressing)</a></h1>
+<h2><a id="w3c-doctype" name="w3c-doctype">W3C Member
+Submission 10 August 2004</a></h2>
+<dl>
+<dt>This version:</dt><dd>
+<a href="http://www.w3.org/Submission/2004/SUBM-ws-addressing-20040810/">
+http://www.w3.org/Submission/2004/SUBM-ws-addressing-20040810/</a>
+</dd>
+<dt>Latest version:</dt>
+<dd>
+<a href="./Web Services Addressing (WS-Addressing)_files/Web Services Addressing (WS-Addressing).htm">http://www.w3.org/Submission/ws-addressing/</a>
+</dd>
+<dt>Authors:</dt>
+<dd>Don Box, Microsoft (Editor)</dd>
+<dd>Erik Christensen, Microsoft</dd>
+<dd>Francisco Curbera, IBM (Editor)</dd>
+<dd>Donald Ferguson, IBM</dd>
+<dd>Jeffrey Frey, IBM</dd>
+<dd>Marc Hadley, Sun Microsystems, Inc.</dd>
+<dd>Chris Kaler, Microsoft</dd>
+<dd>David Langworthy, Microsoft</dd>
+<dd>Frank Leymann, IBM</dd>
+<dd>Brad Lovering, Microsoft</dd>
+<dd>Steve Lucco, Microsoft</dd>
+<dd>Steve Millet, Microsoft</dd>
+<dd>Nirmal Mukhi, IBM</dd>
+<dd>Mark Nottingham, BEA</dd>
+<dd>David Orchard, BEA</dd>
+<dd>John Shewchuk, Microsoft</dd>
+<dd>Eugène Sindambiwe, SAP</dd>
+<dd>Tony Storey, IBM</dd>
+<dd>Sanjiva Weerawarana, IBM</dd>
+<dd>Steve Winkler, SAP</dd>
+</dl>
+</div>
+<div class="div1">
+<h2><a name="Copyright" id="Copyright">Copyright Notice</a></h2>
+<p class="copyright">Copyright © 2002-2004 <a href="http://www.bea.com/">BEA Systems Inc.</a>, <a href="http://www.ibm.com/">International Business Machines Corporation</a>, <a href="http://www.microsoft.com/">Microsoft
+Corporation, Inc</a>, <a href="http://www.sap.com/">SAP AG</a>, and <a href="http://www.sun.com/">Sun Microsystems, Inc.</a>. All rights reserved.<br> This document is available under the <a href="http://www.w3.org/Consortium/Legal/copyright-documents">W3C
+Document License</a>. See the <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">W3C
+Intellectual Rights Notice and Legal Disclaimers</a> for additional information.</p></div>
+<hr>
+<div class="div1">
+<h2><a name="abstract" id="abstract">Abstract</a></h2>
+<p>WS-Addressing provides transport-neutral
+mechanisms to address Web services and messages. 
+Specifically, this specification defines XML [<a href="http://www.w3.org/Submission/ws-addressing/#XML10">XML
+1.0</a>, <a href="http://www.w3.org/Submission/ws-addressing/#XMLNamespaces">XML Namespaces</a>] elements to
+identify Web service endpoints and to secure end-to-end endpoint
+identification in messages.  This specification enables
+messaging systems to support message transmission through networks
+that include processing nodes such as endpoint managers, firewalls,
+and gateways in a transport-neutral manner.</p>
+</div>
+<div class="div1">
+<h2><a name="status" id="status">Status of this Document</a></h2>
+<p><em>This section describes the status of this document at the
+time of its publication. Other documents may supersede this
+document.</em></p>
+<p>By publishing this document, W3C acknowledges that BEA, IBM,
+Microsoft, SAP, and Sun Microsystems, Inc. have made a formal submission
+to W3C for discussion. Publication of this document by W3C indicates no
+endorsement of its content by W3C, nor that W3C has, is, or will be
+allocating any resources to the issues addressed by it. This document is
+not the product of a chartered W3C group, but is published as potential
+input to the <a href="http://www.w3.org/Consortium/Process">W3C Process</a>. Publication
+of acknowledged Member Submissions at the W3C site is one of the
+benefits of <a href="http://www.w3.org/Consortium/Prospectus/Joining">W3C
+Membership</a>. Please consult the requirements associated with Member
+Submissions of <a href="http://www.w3.org/Consortium/Patent-Policy-20030520.html#sec-submissions">section
+3.3 of the W3C Patent Policy</a>. Please consult the complete <a href="http://www.w3.org/Submission">list of acknowledged W3C Member Submissions</a>.</p>
+</div>
+<div class="div1" id="toc">
+<h2><a name="Contents" id="Contents">Table of Contents</a></h2>
+<p class="MsoToc1">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464314">1. Introduction</a>
+</p>
+<p class="MsoToc2">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464315">1.1. Notational Conventions</a>
+</p>
+<p class="MsoToc2">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464316">1.2. Namespaces</a>
+</p>
+<p class="MsoToc1">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464317">2. Endpoint References</a>
+</p>
+<p class="MsoToc2">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464318">2.1. Information Model for Endpoint
+References</a>
+</p>
+<p class="MsoToc2">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464319">2.2. Endpoint Reference XML Infoset
+Representation</a>
+</p>
+<p class="MsoToc2">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464320">2.3. Binding Endpoint References</a>
+</p>
+<p class="MsoToc2">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464321">2.4 Endpoint Reference Comparison</a>
+</p>
+<p class="MsoToc1">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464322">3. Message Information Headers</a>
+</p>
+<p class="MsoToc2">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464323">3.1. Message Information Headers XML Infoset
+Representation</a>
+</p>
+<p class="MsoToc2">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464324">3.2 Formulating a Reply Message</a>
+</p>
+<p class="MsoToc2">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464325">3.3 Associating Action with WSDL
+Operations</a>
+</p>
+<p class="MsoToc3">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464326">3.3.1 Explicit Association</a>
+</p>
+<p class="MsoToc3">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464327">3.3.2 Default Action Pattern</a>
+</p>
+<p class="MsoToc1">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464328">4. Faults</a>
+</p>
+<p class="MsoToc2">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464329">4.1 Invalid Message Information
+Header</a>
+</p>
+<p class="MsoToc2">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464330">4.2 Message Information Header
+Required</a>
+</p>
+<p class="MsoToc2">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464331">4.3 Destination Unreachable</a>
+</p>
+<p class="MsoToc2">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464332">4.4 Action Not Supported</a>
+</p>
+<p class="MsoToc2">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464333">4.5 Endpoint Unavailable</a>
+</p>
+<p class="MsoToc1">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464334">5. Security Considerations</a>
+</p>
+<p class="MsoToc1">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464335">6. Acknowledgements</a>
+</p>
+<p class="MsoToc1">
+<a href="http://www.w3.org/Submission/ws-addressing/#_Toc77464336">7. References</a>
+</p>
+</div>
+<div class="div1">
+<h2>
+<a name="tocRange" id="tocRange">
+</a>
+<a name="_Toc77464314" id="_Toc77464314">1. Introduction</a>
+</h2>
+<p>Web Services Addressing (WS-Addressing)
+defines two interoperable constructs that convey information that
+is typically provided by transport protocols and messaging systems.
+These constructs normalize this underlying information into a
+uniform format that can be processed independently of transport or
+application.  The two constructs are <em>endpoint references</em> and <em>message information headers</em>.</p>
+<p>A Web service endpoint is a (referenceable)
+entity, processor, or resource where Web service messages can be
+targeted. Endpoint references convey the information needed to
+identify/reference a Web service endpoint, and may be used in
+several different ways: endpoint references are suitable for
+conveying the information needed to access a Web service endpoint,
+but are also used to provide addresses for individual messages sent
+to and from Web services. To deal with this last usage case this
+specification defines a family of message information headers that
+allows uniform addressing of messages independent of underlying
+transport. These message information headers convey end-to-end
+message characteristics including addressing for source and
+destination endpoints as well as message identity.</p>
+<p>Both of these constructs are designed to be
+extensible and re-usable so that other specifications can build on
+and leverage endpoint references and message information
+headers.</p>
+<p>The following example illustrates the use of
+these mechanisms in a SOAP 1.2 message being sent from
+http://business456.example/client1 to
+http://fabrikam123.example/Purchasing:</p>
+<pre class="Code">(001) &lt;S:Envelope xmlns:S="http://www.w3.org/2003/05/soap-envelope"      
+                xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"&gt;
+(002)   &lt;S:Header&gt;
+(003)    &lt;wsa:MessageID&gt;
+(004)      uuid:6B29FC40-CA47-1067-B31D-00DD010662DA
+(005)    &lt;/wsa:MessageID&gt;
+(006)    &lt;wsa:ReplyTo&gt;
+(007)      &lt;wsa:Address&gt;http://business456.example/client1&lt;/wsa:Address&gt;
+(008)    &lt;/wsa:ReplyTo&gt;
+(009)    &lt;wsa:To&gt;http://fabrikam123.example/Purchasing&lt;/wsa:To&gt;
+(010)    &lt;wsa:Action&gt;http://fabrikam123.example/SubmitPO&lt;/wsa:Action&gt;
+(011)   &lt;/S:Header&gt;
+(012)   &lt;S:Body&gt;
+(013)     ...
+(014)   &lt;/S:Body&gt;
+(015) &lt;/S:Envelope&gt;</pre>
+<p>Lines (002) to (011) represent the header of
+the SOAP message where the mechanisms defined in the specification
+are used.  The body is represented by lines (012) to
+(014).</p>
+<p>Lines (003) to (010) contain the message
+information header blocks.  Specifically, lines (003) to (005)
+specify the identifier for this message and lines (006) to (008)
+specify the endpoint to which replies to this message should be
+sent as an Endpoint Reference. Line (009) specifies the address URI
+of the ultimate receiver of this message.  Line (010)
+specifies an Action URI identifying expected semantics.</p>
+<div class="div2">
+<h3>
+<a name="_Toc77464315" id="_Toc77464315">1.1. Notational
+Conventions</a>
+</h3>
+<p>The keywords "MUST", "MUST NOT", "REQUIRED",
+"SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY",
+and "OPTIONAL" in this document are to be interpreted as described
+in RFC 2119 [<a href="http://www.w3.org/Submission/ws-addressing/#RFC2119">RFC 2119</a>].</p>
+<p>When describing abstract data models, this
+specification uses the notational convention used by the XML
+Infoset [<a href="http://www.w3.org/Submission/ws-addressing/#XMLInfoset">XML Infoset</a>]. Specifically,
+abstract property names always appear in square brackets (e.g.,
+[some property]).</p>
+<p>When describing concrete XML schemas [XML
+Schema <a href="http://www.w3.org/Submission/ws-addressing/#XMLSchema1">Part 1</a>, <a href="http://www.w3.org/Submission/ws-addressing/#XMLSchema2">Part
+2</a>], this specification uses the notational convention of
+WS-Security [<a href="http://www.w3.org/Submission/ws-addressing/#WSSecurity">WS-Security</a>]. Specifically,
+each member of an element's [children] or [attributes] property is
+described using an XPath-like notation (e.g.,
+/x:MyHeader/x:SomeProperty/@value1).  The use of {any}
+indicates the presence of an element wildcard (&lt;xs:any/&gt;).
+The use of @{any} indicates the presence of an attribute wildcard
+(&lt;xs:anyAttribute/&gt;).</p>
+</div>
+<div class="div2">
+<h3>
+<a name="_Toc77464316" id="_Toc77464316">1.2.
+Namespaces</a>
+</h3>
+<p>
+<span>This
+specification uses a number of namespace prefixes throughout; they
+are listed in Table 1. Note that the choice of any namespace prefix
+is arbitrary and not semantically significant (see [</span>
+<a href="http://www.w3.org/Submission/ws-addressing/#XMLNamespaces">
+<span>XML
+Namespaces</span>
+</a>
+<span>]).</span>
+</p>
+<table summary="Namespace prefixes usage in this specification" style="width: 75%; margin-left: 33pt;" border="1" cellpadding="0">
+<tbody><tr>
+<th style="padding: 3.75pt; width: 14%;" rowspan="1" colspan="1" valign="top"><p>Prefix</p>
+</th>
+<th style="padding: 3.75pt; width: 83%;" rowspan="1" colspan="1" valign="top"><p>Namespace</p>
+</th>
+</tr>
+<tr>
+<td style="padding: 3.75pt; width: 14%;" rowspan="1" colspan="1" valign="top">
+<p>S</p>
+</td>
+<td style="padding: 3.75pt; width: 83%;" rowspan="1" colspan="1" valign="top">
+<p>http://www.w3.org/2003/05/soap-envelope</p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; width: 14%;" rowspan="1" colspan="1" valign="top">
+<p>S11</p>
+</td>
+<td style="padding: 3.75pt; width: 83%;" rowspan="1" colspan="1" valign="top">
+<p>http://schemas.xmlsoap.org/soap/envelope</p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; width: 14%;" rowspan="1" colspan="1" valign="top">
+<p>wsa</p>
+</td>
+<td style="padding: 3.75pt; width: 83%;" rowspan="1" colspan="1" valign="top">
+<p>
+http://schemas.xmlsoap.org/ws/2004/08/addressing   </p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; width: 14%;" rowspan="1" colspan="1" valign="top">
+<p>wsp</p>
+</td>
+<td style="padding: 3.75pt; width: 83%;" rowspan="1" colspan="1" valign="top">
+<p>
+http://schemas.xmlsoap.org/ws/2002/12/policy</p>
+</td>
+</tr>
+<tr>
+<td style="padding: 3.75pt; width: 14%;" rowspan="1" colspan="1" valign="top">
+<p>xs</p>
+</td>
+<td style="padding: 3.75pt; width: 83%;" rowspan="1" colspan="1" valign="top">
+<p>http://www.w3.org/2001/XMLSchema</p>
+</td>
+</tr>
+</tbody></table>
+<p>
+<a name="_Ref21150317" id="_Ref21150317">
+<span class="LabelEmbedded">Table</span>
+</a>
+<span class="LabelEmbedded">1</span> Prefixes and Namespaces used
+in this specification</p>
+<p>WS-Addressing is defined in terms of the XML
+Information Set [<a href="http://www.w3.org/Submission/ws-addressing/#XMLInfoset">XML Infoset</a>]. 
+WS-Addressing is conformant to the SOAP 1.2 [<a href="http://www.w3.org/Submission/ws-addressing/#SOAP12">SOAP
+1.2</a>] processing model; SOAP 1.2 is not a requirement for using
+the constructs defined in this specification. WS-Addressing is also
+designed to be able work with WSDL 1.1 [<a href="http://www.w3.org/Submission/ws-addressing/#WSDL11">WSDL
+1.1</a>] described services. The examples in this specification use
+an XML 1.0 [<a href="http://www.w3.org/Submission/ws-addressing/#XML10">XML 1.0</a>] representation but this
+is not a requirement.</p>
+<p>All information items defined by WS-Addressing
+are identified by the XML namespace URI [<a href="http://www.w3.org/Submission/ws-addressing/#XMLNamespaces">XMLNamespaces</a>] "<span class="CodeEmbedded">http://schemas.xmlsoap.org/ws/2004/08/addressing</span>".
+A normative XML Schema [XML Schema <a href="http://www.w3.org/Submission/ws-addressing/#XMLSchema1">Part
+1</a>, <a href="http://www.w3.org/Submission/ws-addressing/#XMLSchema2">Part 2</a>] document can be obtained
+by dereferencing the XML namespace URI.</p>
+</div>
+</div>
+<div class="div1">
+<h2>
+<a name="_Toc77464317" id="_Toc77464317">
+</a>
+<a name="_2__The_WS_Routing_Model" id="_2__The_WS_Routing_Model">
+</a>2.
+Endpoint References</h2>
+<p>This section defines the model and syntax of
+an endpoint reference.</p>
+<p>
+<a name="_Ref22116741" id="_Ref22116741">
+</a>
+<a name="_Ref13365961" id="_Ref13365961">
+</a>
+<a name="_Ref13365940" id="_Ref13365940">
+</a>
+<a name="_Ref13365921" id="_Ref13365921">
+</a>
+<a name="_2_3_5_Gateway" id="_2_3_5_Gateway">
+</a>
+<a name="_3_1_Endpoints" id="_3_1_Endpoints">
+</a>This specification introduces a new
+description element type, the endpoint reference, with the intent
+of supporting a set of dynamic usage patterns not currently
+appropriately covered by WSDL 1.1 [<a href="http://www.w3.org/Submission/ws-addressing/#WSDL11">WSDL 1.1</a>].
+In particular, this specification intends to facilitate the
+following usage scenarios:</p>
+<ul>
+<li>
+Dynamic generation and customization of service endpoint
+descriptions.</li>
+</ul>
+<ul>
+<li>
+Identification and description of specific service instances that
+are created as the result of stateful interactions.</li>
+</ul>
+<ul>
+<li>
+Flexible and dynamic exchange of endpoint information in tightly
+coupled environments where communicating parties share a set of
+common assumptions about specific policies or protocols that are
+used during the interaction.</li>
+</ul>
+<p>To support these scenarios, we define a
+lightweight and extensible mechanism to dynamically identify and
+describe service endpoints and instances. Because of the current
+limits of the WSDL 1.1 extensibility model, the WSDL 1.1 service
+and port elements cannot be used to cover the use cases listed
+above. Endpoint references logically extend the WSDL description
+model (e.g., portTypes, bindings, etc.), but do not replace it.
+Endpoint references will be used instead of WSDL &lt;service/&gt;
+elements in the following cases:</p>
+<ul>
+<li>
+Specific instances of a stateful service need to be identified or
+its instance-specific configuration details need to be
+transmitted.</li>
+</ul>
+<ul>
+<li>
+A lightweight, self-contained description of a service endpoint
+needs to be communicated. In particular, this may be necessary when
+the details of the endpoint configuration are already shared by the
+communicating parties, but specific policy information needs to be
+added or updated, typically as a result of a dynamic configuration
+process.</li>
+</ul>
+<p>Endpoint references complement and do not
+replace the WSDL/1.1 &lt;wsdl:service&gt; element. We expect
+solutions built on WSDL/1.1 to continue to utilize a service
+element.  Moving forward we anticipate that endpoint
+references and WSDL will evolve coherently.  The endpoint
+references may link to service elements in WSDL/1.1, and support
+additional scenarios in which the WSDL information is not known by
+a party processing a message. These scenarios may include dynamic
+messaging or limited capability message processors.</p>
+<div class="div2">
+<h3>
+<a name="_Toc77464318" id="_Toc77464318">2.1. Information Model
+for Endpoint References</a>
+</h3>
+<p>An endpoint reference consists of the
+following abstract properties:</p>
+<dl>
+<dt style="font-weight: normal;">
+<b>[address]</b> :
+URI (mandatory)</dt>
+<dd>An address URI that identifies the
+endpoint. This may be a network address or a logical address.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<b>[reference
+properties]</b> : xs:any (0..unbounded).</dt>
+<dd>A reference may contain a number of
+individual properties that are required to identify the entity or
+resource being conveyed. Reference identification properties are
+element information items that are named by QName and are required
+to properly dispatch messages to endpoints at the endpoint side of
+the interaction. Reference properties are provided by the issuer of
+the endpoint reference and are otherwise assumed to be opaque to
+consuming applications. The interpretation of these properties (as
+the use of the endpoint reference in general) is dependent upon the
+protocol binding and data encoding used to interact with the
+endpoint. Section 2.3 below defines the default binding for the
+SOAP protocol. Consuming applications SHOULD assume that endpoints
+represented by endpoint references with different [reference
+properties] may accept different sets of messages or follow a
+different set of policies, and consequently may have different
+associated metadata (WSDL, XML Schema, and WS-Policy policies ).
+The relationship between reference properties and endpoint policies
+is further explained in Section 2.4.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<b>[reference parameters]</b> : xs:any
+(0..unbounded).</dt>
+<dd>A reference may contain a number of
+individual parameters which are associated with the endpoint to
+facilitate a particular interaction. Reference parameters are
+element information items that are named by QName and are required
+to properly interact with the endpoint. Reference parameters are
+also provided by the issuer of the endpoint reference and are
+otherwise assumed to be opaque to consuming applications. The use
+of reference parameters is dependent upon the protocol binding and
+data encoding used to interact with the endpoint. Section 2.3
+describes the default binding for the SOAP protocol. Unlike
+[reference properties], the [reference parameters] of two endpoint
+references may differ without an implication that different XML
+Schema, WSDL or policies apply to the endpoints.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<b>[selected port
+type]</b> : QName (0..1)</dt>
+<dd>The QName of the primary portType of the
+endpoint being conveyed.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<b>[service-port]</b>
+: (QName, NCName (0..1)) (0..1)</dt>
+<dd>This is the QName identifying the WSDL
+service element that contains the definition of the endpoint being
+conveyed. The service name provides a link to a full description of
+the service endpoint. An optional non-qualified name identifies the
+specific port in the service that corresponds to the endpoint.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<b>[policy]</b> :
+wsp:policy (0..unbounded)</dt>
+<dd>A variable number of XML policy elements
+as described in WS-Policy [<a href="http://www.w3.org/Submission/ws-addressing/#WSPolicy">WS-Policy</a>]
+describing the behavior, requirements and capabilities of the
+endpoint. Policies may be included in an endpoint to facilitate
+easier processing by the consuming application, or because the
+policy was dynamically generated. However, embedded policies are
+not authoritative and may be stale or incoherent with the policies
+associated with the endpoint at the time when the interaction
+occurs.</dd>
+</dl>
+</div>
+<div class="div2">
+<h3>
+<a name="_Toc77464319" id="_Toc77464319">2.2. Endpoint
+Reference XML Infoset Representation</a>
+</h3>
+<p>This section defines an XML Infoset-based
+representation for an endpoint reference as both an XML type
+(<span class="CodeEmbedded">wsa:EndpointReferenceType</span>) and
+as an XML element (<span class="CodeEmbedded">&lt;wsa:EndpointReference&gt;</span>).</p>
+<p>The <span class="CodeEmbedded">wsa:EndpointReferenceType</span> type is used
+wherever a Web service endpoint is referenced.  The following
+describes the contents of this type:</p>
+<pre class="Code">&lt;wsa:EndpointReference&gt;
+    &lt;wsa:Address&gt;<em>xs:anyURI</em>&lt;/wsa:Address&gt;
+    &lt;wsa:ReferenceProperties&gt;... &lt;/wsa:ReferenceProperties&gt; ?
+    &lt;wsa:ReferenceParameters&gt;... &lt;/wsa:ReferenceParameters&gt; ?
+    &lt;wsa:PortType&gt;<em>xs:QName</em>&lt;/wsa:PortType&gt; ?
+    &lt;wsa:ServiceName PortName="<em>xs:NCName</em>"?&gt;<em>xs:QName</em>&lt;/wsa:ServiceName&gt; ?
+    &lt;wsp:Policy&gt; <em>...</em> &lt;/wsp:Policy&gt;*
+&lt;/wsa:EndpointReference&gt;</pre>
+<p>The following describes the attributes and
+elements listed in the schema overview above:</p>
+<dl>
+<dt style="font-weight: normal;">
+<em>/wsa:EndpointReference</em>
+</dt>
+<dd>This represents some element of type
+<span class="CodeEmbedded">wsa:EndpointReferenceType</span>. 
+This example uses the predefined <span class="CodeEmbedded">&lt;wsa:EndpointReference&gt;</span> element, but
+any element of type wsa:EndpointReferenceType may be used.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<em>/wsa:EndpointReference/wsa:Address</em>
+</dt>
+<dd>This REQUIRED element (of type
+<span class="CodeEmbedded">xs:anyURI</span>) specifies the
+[address] property of the endpoint reference. This address may be a
+logical address or identifier for the service endpoint.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<em>/wsa:EndpointReference/wsa:ReferenceProperties/</em>
+</dt>
+<dd>This OPTIONAL element contains the
+elements that convey the [reference properties] of the
+reference.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<em>/wsa:EndpointReference/wsa:ReferenceProperties/{any}</em>
+</dt>
+<dd>Each child element of ReferenceProperties
+represents an individual [reference property].</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<em>/wsa:EndpointReference/wsa:ReferenceParameters/</em>
+</dt>
+<dd>This OPTIONAL element contains the
+elements that convey the [reference parameters] of the
+reference.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<em>/wsa:EndpointReference/wsa:ReferenceParameters/{any}</em>
+</dt>
+<dd>Each child element of ReferenceParameters
+represents an individual [reference parameter].</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<em>/wsa:EndpointReference/wsa:PortType</em>
+</dt>
+<dd>This OPTIONAL element (of type
+<span class="CodeEmbedded">xs:Qname</span>) specifies the value of
+the [selected port type] property of the endpoint reference.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<em>/wsa:EndpointReference/wsa:ServiceName</em>
+</dt>
+<dd>This OPTIONAL element (of type
+<span class="CodeEmbedded">xs:QName</span>) specifies the
+<span class="CodeEmbedded">&lt;wsdl:service&gt;</span> definition
+that contains a WSDL description of the endpoint being
+referenced.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<em>/wsa:EndpointReference/wsa:ServiceName/@PortName</em>
+</dt>
+<dd>This OPTIONAL attribute (of type
+<span class="CodeEmbedded">xs:NCName</span>) specifies the name of
+the <span class="CodeEmbedded">&lt;wsdl:port&gt;</span> definition
+that corresponds to the endpoint being referenced.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<em>/wsa:EndpointReference/wsp:Policy</em>
+</dt>
+<dd>This OPTIONAL element specifies a policy
+that is relevant to the interaction with the endpoint.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<em>/wsa:EndpointReference/{any}</em>
+</dt>
+<dd>This is an extensibility mechanism to
+allow additional elements to be specified.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<em>/wsa:EndpointReference/@{any}</em>
+</dt>
+<dd>This is an extensibility mechanism to
+allow additional attributes to be specified.</dd>
+</dl>
+<p>The following illustrates an endpoint
+reference.  This element references the port of type
+"fabrikam:InventoryPortType" at the URI
+"http://www.fabrikam123.example/acct".</p>
+<pre class="Code">&lt;wsa:EndpointReference xmlns:wsa="..." xmlns:fabrikam="..."&gt;
+   &lt;wsa:Address&gt;http://www.fabrikam123.example/acct&lt;/wsa:Address&gt;
+   &lt;wsa:PortType&gt;fabrikam:InventoryPortType&lt;/wsa:PortType&gt;
+&lt;/wsa:EndpointReference&gt;</pre>
+</div>
+<div class="div2">
+<h3>
+<a name="_Toc77464320" id="_Toc77464320">2.3. Binding Endpoint
+References</a>
+</h3>
+<p>When a message needs to be addressed to the
+endpoint, the information contained in the endpoint reference is
+mapped to the message according to a transformation that is
+dependent on the protocol and data representation used to send the
+message.  Protocol-specific mappings (or bindings) will define
+how the information in the endpoint reference is copied to message
+and protocol fields. This specification defines the SOAP binding
+for endpoint references. This mapping MAY be explicitly replaced by
+other bindings (defined as WSDL bindings or as policies); however,
+in the absence of an applicable policy stating that a different
+mapping must be used, the SOAP binding defined here is assumed to
+apply. To ensure interoperability with a broad range of devices,
+all conformant implementations MUST support the SOAP binding.</p>
+<p>The SOAP binding for endpoint references
+is defined by the following two rules:</p>
+<ul>
+<li>The [address] property in the endpoint reference is copied in the
+[destination] header field of the SOAP message.</li>
+<li>Each [reference property] and [reference parameter] element becomes
+a header block in the SOAP message. The element information item of
+each [reference property] or [reference parameter] (including all
+of its [children], [attributes] and [in-scope namespaces]) is to be
+added as a header block in the new message.</li>
+</ul>
+<p>The next example shows how the default SOAP
+binding for endpoint references is used to construct a message
+addressed to the endpoint:</p>
+<pre class="Code">&lt;wsa:EndpointReference xmlns:wsa="..." xmlns:fabrikam="..."&gt;
+   &lt;wsa:Address&gt;http://www.fabrikam123.example/acct&lt;/wsa:Address&gt;
+   &lt;wsa:ReferenceProperties&gt;
+       &lt;fabrikam:CustomerKey&gt;123456789&lt;/fabrikam:CustomerKey&gt;
+   &lt;/wsa:ReferenceProperties&gt;
+   &lt;wsa:ReferenceParameters&gt;
+       &lt;fabrikam:ShoppingCart&gt;ABCDEFG&lt;/fabrikam:ShoppingCart&gt;
+   &lt;/wsa:ReferenceParameters&gt;
+&lt;/wsa:EndpointReference&gt;</pre>
+<p>According to the mapping rules stated before,
+the address value is copied in the "To" header and the
+"CustomerKey" element should be copied literally as a header in a
+SOAP message addressed to this endpoint. The SOAP message would
+look as follows:</p>
+<pre class="Code">&lt;S:Envelope xmlns:S="http://www.w3.org/2003/05/soap-envelope"
+         xmlns:wsa="..." xmlns:fabrikam="... "&gt;
+   &lt;S:Header&gt;
+     ...
+    &lt;wsa:To&gt;http://www.fabrikam123.example/acct&lt;/wsa:To&gt;
+    &lt;fabrikam:CustomerKey&gt;123456789&lt;/fabrikam:CustomerKey&gt;
+    &lt;fabrikam:ShoppingCart&gt;ABCDEFG&lt;/fabrikam:ShoppingCart&gt;
+     ...
+   &lt;/S:Header&gt;
+   &lt;S:Body&gt;
+     ...
+   &lt;/S:Body&gt;
+&lt;/S:Envelope&gt;</pre>
+</div>
+<div class="div2">
+<h3>
+<a name="_Toc77464321" id="_Toc77464321">2.4 Endpoint Reference
+Comparison</a>
+</h3>
+<p>During the course of Web services interactions
+applications may receive multiple endpoint references describing
+the endpoints it needs to interact with. Different copies of an
+endpoint reference may also be received over time.</p>
+<p>The following rules clarify the relation
+between the behaviors of the endpoints represented by two endpoint
+references with the same [address] and the same [reference
+properties].</p>
+<ul>
+<li>The two endpoints accept the same sets of messages, and follow and
+require the same set of policies. That is, the XML Schema, WSDL,
+and WS-Policy metadata applicable to the two references are the
+same.</li>
+<li>In particular, the policies applicable to the two endpoints are the
+same regardless of the values of the embedded [policy]. Embedded
+policies are not authoritative and may be stale or incoherent with
+the policies associated with the endpoint.</li>
+</ul>
+<p style="margin-left: 0.05in;">The [address]
+properties of two endpoint references are compared according to Section 6 of [<a href="http://www.w3.org/Submission/ws-addressing/#RFC2396">RFC 2396</a>].
+The [reference properties] of two endpoint references are equal
+if:</p>
+<ul>
+<li>they contain the same number of individual properties;</li>
+<li>for each reference property in one endpoint reference there exists
+an equivalent reference property in the other. One [reference
+property] is equivalent to another [reference property] if their
+byte streams per Exclusive XML Canonicalization are equal.</li>
+</ul>
+<p style="margin-left: 0.05in;">Therefore, a
+consuming application should assume that different XML Schemas,
+WSDL definitions and policies apply to endpoint references whose
+address or reference properties differ.</p>
+</div>
+</div>
+<div class="div1">
+<h2>
+<a name="_Toc77464322" id="_Toc77464322">3.</a> Message
+Information Headers</h2>
+<p>This section defines the model and syntax of a
+message information header.</p>
+<p>The message information headers collectively
+augment a message with the following abstract properties. 
+These properties enable the identification and location of the
+endpoints involved in an interaction.  The basic interaction
+pattern from which all others are composed is "one way".  In
+this pattern a source sends a message to a destination without any
+further definition of the interaction.  </p>
+<p>"Request Reply" is a common interaction
+pattern that consists of an initial message sent by a source
+endpoint (the request) and a subsequent message sent from the
+destination of the request back to the source (the reply).  A
+reply can be either an application message, a fault, or any other
+message.</p>
+<p>The properties below support one way, request
+reply, and any other interaction pattern:</p>
+<dl>
+<dt style="font-weight: normal;">
+<b>[destination]</b>
+: URI (mandatory)</dt>
+<dd>The address of the intended receiver of
+this message.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<b>[source
+endpoint]</b> : endpoint reference (0..1)</dt>
+<dd>Reference of the endpoint where the
+message originated from.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<b>[reply
+endpoint]</b> : endpoint reference (0..1)</dt>
+<dd>An endpoint reference that identifies the
+intended receiver for replies to this message. If a reply is
+expected, a message MUST contain a [reply endpoint]. The sender
+MUST use the contents of the [reply endpoint] to formulate the
+reply message as defined in Section 3.2. If the [reply endpoint] is
+absent, the contents of the [source endpoint] may be used to
+formulate a message to the source. This property MAY be absent if
+the message has no meaningful reply. If this property is present,
+the [message id] property is REQUIRED.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<b>[fault
+endpoint]</b> : endpoint reference (0..1)</dt>
+<dd>An endpoint reference that identifies the
+intended receiver for faults related to this message. When
+formulating a fault message as defined in Section 3.2 and 4, the
+sender MUST use the contents of the [fault endpoint] of the message
+being replied to to formulate the fault message. If the [fault
+endpoint] is absent, the sender MAY use the contents of the [reply
+endpoint] to formulate the fault message. If both the [fault
+endpoint] and [reply endpoint] are absent, the sender MAY use the
+contents of the [source endpoint] to formulate the fault message.
+This property may be absent if the sender cannot receive fault
+messages (e.g., is a one-way application message). If this property
+is present, the [message id] property is REQUIRED.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<b>[action]</b> : URI
+(mandatory)</dt>
+<dd>An identifier that uniquely (and
+opaquely) identifies the semantics implied by this message.
+<p>It is RECOMMENDED that value of the
+[action] property is a URI identifying an input, output, or fault
+message within a WSDL port type. An action may be explicitly or
+implicitly associated with the corresponding WSDL definition.
+Section 3.3 below describes the mechanisms of association.
+ Finally, if in addition to the [action] property, a SOAP
+Action URI is encoded in a request, the URI of the SOAP Action MUST
+be the same as the one specified by the [action] property.</p>
+</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<b>[message id]</b> :
+URI (0..1)</dt>
+<dd>A URI that uniquely identifies this
+message in time and space. No two messages with a distinct
+application intent may share a [message id] property. A message MAY
+be retransmitted for any purpose including communications failure
+and MAY use the same [message id] property.  The value of this
+property is an opaque URI whose interpretation beyond equivalence
+is not defined in this specification.  If a reply is expected,
+this property MUST be present. </dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<b>[relationship]</b>
+: (QName, URI) (0..unbounded)</dt>
+<dd>A pair of values that indicate how this
+message relates to another message. The type of the relationship is
+identified by a QName. The related message is identified by a URI
+that corresponds to the related message's [message id] property.
+The message identifier URI may refer to a specific message, or be
+the following well-known URI that means "unspecified message":
+<pre class="Code">http://schemas.xmlsoap.org/ws/2004/08/addressing/id/unspecified</pre>
+<p>This specification has one predefined
+relationship type:</p>
+<table summary="Description of the QName used in [relationship]" style="margin-left: 24pt;" border="1" cellpadding="0">
+<tbody><tr>
+<th style="padding: 3.75pt; width: 25%;" rowspan="1" colspan="1" valign="top"><p>QName</p>
+</th>
+<th style="padding: 3.75pt; width: 73%;" rowspan="1" colspan="1" valign="top"><p>Description  </p>
+</th>
+</tr>
+<tr>
+<td style="padding: 3.75pt; width: 25%;" rowspan="1" colspan="1" valign="top">
+<p>wsa:Reply</p>
+</td>
+<td style="padding: 3.75pt; width: 73%;" rowspan="1" colspan="1" valign="top">
+<p>Indicates that this is a reply to the message
+identified by the URI.</p>
+</td>
+</tr>
+</tbody></table>
+<p>A reply message MUST contain a
+[relationship] property consisting of wsa:Reply and the message id
+property of the request message.</p>
+</dd>
+</dl>
+<p>The dispatching of incoming messages is based
+on two message properties. The mandatory "destination" and "action"
+fields identify the target processing location and the verb or
+intent of the message.</p>
+<p>Due to the range of network technologies
+currently in wide-spread use (e.g., NAT, DHCP, firewalls), many
+deployments cannot assign a meaningful global URI to a given
+endpoint. To allow these "anonymous" endpoints to initiate message
+exchange patterns and receive replies, WS-Addressing defines the
+following well-known URI for use by endpoints that cannot have a
+stable, resolvable URI.</p>
+<pre class="Code">http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</pre>
+<p>Requests whose [reply endpoint], [source
+endpoint] and/or [fault endpoint] use this address MUST provide
+some out-of-band mechanism for delivering replies or faults
+(e.g.  returning the reply on the same transport connection).
+This mechanism may be a simple request/reply transport protocol
+(e.g., HTTP GET or POST). This URI MAY be used as the [destination]
+for reply messages and SHOULD NOT be used as the [destination] in
+other circumstances.</p>
+<div class="div2">
+<h3>
+<a name="_Toc77464323" id="_Toc77464323">3.1. Message
+Information Headers XML Infoset Representation</a>
+</h3>
+<p>The message information header blocks provide
+end-to-end characteristics of a message that can be easily secured
+as a unit. The information in these headers is immutable and not
+intended to be modified along the message path. </p>
+<p>The following describes the contents of the
+message information header blocks:</p>
+<pre class="Code">  &lt;wsa:MessageID&gt; xs:<em>anyURI</em> &lt;/wsa:MessageID&gt;
+  &lt;wsa:RelatesTo RelationshipType="..."?&gt;<em>xs:anyURI</em>&lt;/wsa:RelatesTo&gt;
+  &lt;wsa:To&gt;<em>xs:anyURI</em>&lt;/wsa:To&gt;
+  &lt;wsa:Action&gt;<em>xs:anyURI</em>&lt;/wsa:Action&gt;
+  &lt;wsa:From&gt;<em>endpoint-reference</em>&lt;/wsa:From&gt;
+  &lt;wsa:ReplyTo&gt;<em>endpoint-reference</em>&lt;/wsa:ReplyTo&gt;
+  &lt;wsa:FaultTo&gt;<em>endpoint-reference</em>&lt;/wsa:FaultTo&gt;</pre>
+<p>The following describes the attributes and
+elements listed in the schema overview above:</p>
+<dl>
+<dt style="font-weight: normal;">
+<em>/wsa:MessageID</em>
+</dt>
+<dd>This OPTIONAL element (of type
+<span class="CodeEmbedded">xs:anyURI</span>) conveys the [message
+id] property.  This element MUST be present if wsa:ReplyTo or
+wsa:FaultTo is present.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<em>/wsa:RelatesTo</em>
+</dt>
+<dd>This OPTIONAL (repeating) element
+information item contributes one abstract [relationship] property
+value, in the form of a (URI, QName) pair. The [children] property
+of this element (which is of type <span class="CodeEmbedded">xs:anyURI</span>) conveys the [message id] of the
+related message.  This element MUST be present if the message
+is a reply.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<em>/wsa:RelatesTo/@RelationshipType</em>
+</dt>
+<dd>This OPTIONAL attribute (of type
+<span class="CodeEmbedded">xs:QName</span>) conveys the
+relationship type as a QName. When absent, the implied value of
+this attribute is wsa:Reply.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<em>/wsa:ReplyTo</em>
+</dt>
+<dd>This OPTIONAL element (of type
+<span class="CodeEmbedded">wsa:EndpointReferenceType</span>)
+provides the value for the [reply endpoint] property.  This
+element MUST be present if a reply is expected.  If this
+element is present, wsa:MessageID MUST be present.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<em>/wsa:From</em>
+</dt>
+<dd>This OPTIONAL element (of type
+<span class="CodeEmbedded">wsa:EndpointReferenceType</span>)
+provides the value for the [source endpoint] property.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<em>/wsa:FaultTo</em>
+</dt>
+<dd>This OPTIONAL element (of type
+<span class="CodeEmbedded">wsa:EndpointReferenceType</span>)
+provides the value for the [fault endpoint] property.  If this
+element is present, wsa:MessageID MUST be present.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<em>/wsa:To</em>
+</dt>
+<dd>This REQUIRED element (of type
+<span class="CodeEmbedded">xs:anyURI</span>) provides the value for
+the [destination] property.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<em>/wsa:Action</em>
+</dt>
+<dd>This REQUIRED element of type
+<span class="CodeEmbedded">xs:anyURI</span> conveys the [action]
+property.  The [children] of this element convey the value of
+this property.</dd>
+</dl>
+</div>
+<div class="div2">
+<h3>
+<a name="_Toc77464324" id="_Toc77464324">3.2 Formulating a
+Reply Message</a>
+</h3>
+<p>The reply to a WS-Addressing compliant request
+message MUST be compliant to WS-Addressing and be constructed
+according to the rules defined in this section.</p>
+<p>The following example illustrates a request
+message using message information header blocks in a SOAP 1.2
+message:</p>
+<pre class="Code">&lt;S:Envelope xmlns:S="http://www.w3.org/2003/05/soap-envelope"
+  xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+  xmlns:f123="http://www.fabrikam123.example/svc53"&gt;
+  &lt;S:Header&gt; 
+  &lt;wsa:MessageID&gt;uuid:aaaabbbb-cccc-dddd-eeee-ffffffffffff
+    &lt;/wsa:MessageID&gt;
+    &lt;wsa:ReplyTo&gt; 
+    &lt;wsa:Address&gt;http://business456.example/client1&lt;/wsa:Address&gt;
+    &lt;/wsa:ReplyTo&gt;
+    &lt;wsa:To S:mustUnderstand="1"&gt;mailto:joe@fabrikam123.example&lt;/wsa:To&gt;
+    &lt;wsa:Action&gt;http://fabrikam123.example/mail/Delete&lt;/wsa:Action&gt;
+  &lt;/S:Header&gt;
+  &lt;S:Body&gt;
+    &lt;f123:Delete&gt;     
+       &lt;maxCount&gt;42&lt;/maxCount&gt;
+    &lt;/f123:Delete&gt;
+  &lt;/S:Body&gt;
+&lt;/S:Envelope&gt;</pre>
+<p>This message would have the following property
+values:</p>
+<p class="TextIndented">
+<span class="LabelEmbedded">[destination]</span> The URI
+mailto:joe@fabrikam123.example</p>
+<p class="TextIndented">
+<span class="LabelEmbedded">[reply
+endpoint]</span> The endpoint with [address]
+http://business456.example/client1</p>
+<p class="TextIndented">
+<span class="LabelEmbedded">[action]</span>
+<span>http://fabrikam123.example/mail/Delete</span>
+</p>
+<p class="TextIndented">
+<span class="LabelEmbedded">
+[message id]
+</span>
+<span>uuid:aaaabbbb-cccc-dddd-eeee-ffffffffffff</span>
+</p>
+<p>The following example illustrates a reply
+message using message information header blocks in a SOAP 1.2
+message:</p>
+<pre class="Code">&lt;S:Envelope
+  xmlns:S="http://www.w3.org/2003/05/soap-envelope" 
+  xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+  xmlns:f123="http://www.fabrikam123.example/svc53"&gt;
+  &lt;S:Header&gt;
+    &lt;wsa:MessageID&gt;
+      uuid:aaaabbbb-cccc-dddd-eeee-wwwwwwwwwww
+    &lt;/wsa:MessageID&gt;
+    &lt;wsa:RelatesTo&gt;
+      uuid:aaaabbbb-cccc-dddd-eeee-ffffffffffff
+    &lt;/wsa:RelatesTo&gt;
+    &lt;wsa:To S:mustUnderstand="1"&gt;
+      http://business456.example/client1
+    &lt;/wsa:To&gt;
+    &lt;wsa:Action&gt;http://fabrikam123.example/mail/DeleteAck&lt;/wsa:Action&gt;
+  &lt;/S:Header&gt;
+  &lt;S:Body&gt;
+    &lt;f123:DeleteAck/&gt;
+  &lt;/S:Body&gt;
+&lt;/S:Envelope&gt;</pre>
+<p>This message would have the following property
+values:</p>
+<p class="TextIndented">
+<span class="LabelEmbedded">[destination]</span>
+http://business456.example/client1</p>
+<p class="TextIndented">
+<span class="LabelEmbedded">[action]</span>
+<span>http://fabrikam123.example/mail/DeleteAck</span>
+</p>
+<p class="TextIndented">
+<span class="LabelEmbedded">
+[message id]
+</span>
+<span>uuid:aaaabbbb-cccc-dddd-eeee-wwwwwwwww</span>
+</p>
+<p class="TextIndented">
+<span class="LabelEmbedded">
+[relationship]
+</span>
+<span>(wsa:Reply,
+uuid:aaaabbbb-cccc-dddd-eeee-ffffffffffff)</span>
+</p>
+</div>
+<div class="div2">
+<h3>
+<a name="_Toc77464325" id="_Toc77464325">3.3 Associating Action
+with WSDL Operations</a>
+</h3>
+<p>WS-Addressing defines two mechanisms to
+associate an action with input, output and fault elements within a
+WSDL port type.</p>
+<div class="div3">
+<h3>
+<a name="_Toc77464326" id="_Toc77464326">3.3.1 Explicit
+Association</a>
+</h3>
+<p>The action may be explicitly associated using
+the wsa:Action attribute or in the absence of the attribute the
+action is defined by the rule in section 3.3.2.</p>
+<p>For example consider the following WSDL
+excerpt:</p>
+<pre class="Code">&lt;definitions targetNamespace="http://example.com/stockquote" ...&gt;
+  ...
+  &lt;portType name="StockQuotePortType"&gt;
+    &lt;operation name="GetLastTradePrice"&gt;
+      &lt;input message="tns:GetTradePricesInput"
+            <b>wsa:Action="http://example.com/GetQuote"</b>/&gt;
+      &lt;output message="tns:GetTradePricesOutput"
+            <b>wsa:Action="http://example.com/Quote"</b>/&gt;
+    &lt;/operation&gt;
+  &lt;/portType&gt;
+  ...
+&lt;/definitions&gt;</pre>
+<p>The action for the input of the <span class="CodeEmbedded">GetLastTradePrice</span> operation within the
+<span class="CodeEmbedded">StockQuotePortType</span> is explicitly
+defined to be <span class="CodeEmbedded">http://example.com/GetQuote</span>.  The action
+for the output of this same operation is <span class="CodeEmbedded">http://example.com/Quote</span>.</p>
+</div>
+<div class="div3">
+<h3>
+<a name="_Toc77464327" id="_Toc77464327">3.3.2 Default Action
+Pattern</a>
+</h3>
+<p>In the absence of the <span class="CodeEmbedded">wsa:Action</span> attribute, the following pattern
+is used to construct a default action for inputs and outputs. 
+The general form of an action URI is as follows:</p>
+<pre class="Code">[target namespace]/[port type name]/[input|output name]</pre>
+<p>The "/" is a literal character to be included
+in the action.  The values of the properties are as defined
+below.</p>
+<p>[target namespace] is the target namespace
+(/definition/@targetNamespace). If [target namespace] ends with a
+"/" an additional "/" is not added.</p>
+<p>[port type name] is the name of the port type
+(/definition/portType/@name).</p>
+<p>[input|output name] is the name of the element
+as defined in <a href="http://www.w3.org/TR/wsdl#_names">Section
+2.4.5</a> of WSDL 1.1.</p>
+<p>For fault messages, this pattern is not
+applied. Instead, the following URI is the default action URI for
+fault messages:</p>
+<pre class="Code">http://schemas.xmlsoap.org/ws/2004/08/addressing/fault</pre>
+<p>For example consider the following WSDL
+excerpt:</p>
+<pre class="Code">&lt;definitions targetNamespace="http://example.com/stockquote" ...&gt;
+  ...
+  &lt;portType name="StockQuotePortType"&gt;
+    &lt;operation name="GetLastTradePrice"&gt;
+      &lt;input message="tns:GetTradePricesInput" name="GetQuote"/&gt;
+      &lt;output message="tns:GetTradePricesOutput" name="Quote"/&gt;
+    &lt;/operation&gt;
+  &lt;/portType&gt;
+  ...
+&lt;/definitions&gt;</pre>
+<p class="TextIndented">
+<b>[targetNamespace]</b>
+= http://example.com/stockquote</p>
+<p class="TextIndented">
+<b>[port type name]</b>
+= StockQuotePortType</p>
+<p class="TextIndented">
+<b>[input name]</b> =
+GetQuote</p>
+<p class="TextIndented">
+<b>[output name]</b> =
+Quote</p>
+<p>Applying the pattern above with these values
+we have:</p>
+<p class="TextIndented">input action = http://example.com/stockquote/StockQuotePortType/GetQuote</p>
+<p class="TextIndented">output action =
+http://example.com/stockquote/StockQuotePortType/Quote</p>
+<p>WSDL defines rules for a default input or
+output name if the name attribute is not present.  Consider
+the following example:</p>
+<p>For example consider the following WSDL
+excerpt:</p>
+<pre class="Code">&lt;definitions targetNamespace="http://example.com/stockquote" ...&gt;
+  ...
+  &lt;portType name="StockQuotePortType"&gt;
+    &lt;operation name="GetLastTradePrice"&gt;
+      &lt;input message="tns:GetTradePricesInput"/&gt;
+      &lt;output message="tns:GetTradePricesOutput"/&gt;
+    &lt;/operation&gt;
+  &lt;/portType&gt;
+  ...
+&lt;/definitions&gt;</pre>
+<p class="TextIndented">
+<b>[targetNamespace]</b>
+= http://example.com/stockquote</p>
+<p class="TextIndented">
+<b>[port type name]</b>
+= StockQuotePortType</p>
+<p>According to the rules defined in WSDL 2.4.5,
+if the name attribute is absent for the input of a request response
+operation the default value is the name of the operation "Request"
+appended.</p>
+<p class="TextIndented">
+<b>[input name]</b> =
+GetLastTradePriceRequest</p>
+<p>Likewise, the output defaults to the operation
+name with "Response" appended.</p>
+<p class="TextIndented">
+<b>[output name]</b> =
+GetLastTradePriceResponse</p>
+<p>Applying the pattern above with these values
+we have:</p>
+<p class="TextIndented">input action = http://example.com/stockquote/StockQuotePortType/GetLastTradePriceRequest</p>
+<p class="TextIndented">output action = http://example.com/stockquote/StockQuotePortType/GetLastTradePriceResponse</p>
+</div>
+</div>
+</div>
+<div class="div1">
+<h2>
+<a name="_Toc77464328" id="_Toc77464328">
+</a>
+<a name="_3_2_Traversing_the_Forward_Message_" id="_3_2_Traversing_the_Forward_Message_">
+</a>
+<a name="_3_2_4_Delegating_Processing" id="_3_2_4_Delegating_Processing">
+</a>
+<a name="_3_3_Building_a_Reverse_Message_Path" id="_3_3_Building_a_Reverse_Message_Path">
+</a>
+<a name="_3_4_Message_Path_Manipulation" id="_3_4_Message_Path_Manipulation">
+</a>
+<a name="_3_4_2_Hiding_Parts_of_the_Reverse_M" id="_3_4_2_Hiding_Parts_of_the_Reverse_M">
+</a>
+<a name="_3_5_Message_Forwarding" id="_3_5_Message_Forwarding">
+</a>
+<a name="_4__WS_Routing_Header_Block_Structur" id="_4__WS_Routing_Header_Block_Structur">
+</a>
+<a name="_5_WS_Routing_Fault_Codes" id="_5_WS_Routing_Fault_Codes">
+</a>
+<a name="_5__WS_Routing_Fault_Codes" id="_5__WS_Routing_Fault_Codes">
+</a>
+<a name="_8._Fault_Codes" id="_8._Fault_Codes">
+</a>
+<a name="_5_1_7_EndpointNotSupported" id="_5_1_7_EndpointNotSupported">
+</a>
+<a name="_5_2_5_ForwardingReversePathUnavaila" id="_5_2_5_ForwardingReversePathUnavaila">
+</a>
+<a name="_6__Use_of_URIs_in_WS_Routing" id="_6__Use_of_URIs_in_WS_Routing">
+</a>4. <a name="_Toc55895102" id="_Toc55895102">Faults</a>
+</h2>
+<p>The faults defined in this section are
+generated if the condition stated in the preamble in each
+subsection is met.  They are sent to the [fault endpoint], if
+present and valid.  Otherwise they are sent to the [reply
+endpoint] if present.  If neither is present faults may be
+sent to the [source endpoint].</p>
+<p>Endpoints compliant with this specification
+MUST include required message information headers on all fault
+messages.  Fault messages are correlated as replies using the
+[relationship] property as defined in Section 3.  The [action]
+property below designates WS-Addressing fault messages (this URI is
+also used as default Action value for WSDL fault messages, as
+described in Section 3.3.2):</p>
+<pre class="Code">http://schemas.xmlsoap.org/ws/2004/08/addressing/fault</pre>
+<p>The definitions of faults use the following
+properties:</p>
+<p class="TextIndented">
+<b>[Code]</b> The fault
+code.</p>
+<p class="TextIndented">
+<b>[Subcode]</b> The
+fault subcode.</p>
+<p class="TextIndented">
+<b>[Reason]</b> The
+English language reason element.</p>
+<p class="TextIndented">
+<b>[Detail]</b> The
+detail element.  If absent, no detail element is defined for
+the fault.</p>
+<p>The properties above bind to a SOAP 1.2 fault
+as follows:</p>
+<pre class="Code">&lt;S:Envelope&gt;
+ &lt;S:Header&gt;
+   &lt;wsa:Action&gt;
+     http://schemas.xmlsoap.org/ws/2004/08/addressing/fault
+   &lt;/wsa:Action&gt;
+   &lt;!-- Headers elided for clarity.  --&gt;
+ &lt;/S:Header&gt;
+ &lt;S:Body&gt;
+  &lt;S:Fault&gt;
+   &lt;S:Code&gt;
+    &lt;S:Value&gt;<b>[Code]</b>&lt;/S:Value&gt;
+     &lt;S:Subcode&gt;
+    &lt;S:Value&gt;<b>[Subcode]</b>&lt;/S:Value&gt;
+     &lt;/S:Subcode&gt;
+   &lt;/S:Code&gt;
+   &lt;S:Reason&gt;
+     &lt;S:Text xml:lang="en"&gt;<b>[Reason]</b>&lt;/S:Text&gt;
+   &lt;/S:Reason&gt;
+   &lt;S:Detail&gt;
+     <b>[Detail]</b>
+  &lt;/S:Detail&gt;   
+  &lt;/S:Fault&gt;
+ &lt;/S:Body&gt;
+&lt;/S:Envelope&gt;</pre>
+<a name="_Toc55895103" id="_Toc55895103">
+</a>
+<p>The SOAP 1.1 fault is less expressive and map
+only [Subcode] and [Reason].  These the properties bind to a
+SOAP 1.1 fault as follows:</p>
+<pre class="Code">&lt;S11:Envelope&gt;
+ &lt;S11:Body&gt;
+  &lt;S11:Fault&gt;
+   &lt;faultcode&gt;<b>[Subcode]</b>&lt;/faultcode&gt;
+   &lt;faultstring xml:lang="en"&gt;<b>[Reason]</b>&lt;/faultstring&gt;
+  &lt;/S11:Fault&gt;
+ &lt;/S11:Body&gt;
+&lt;/S11:Envelope&gt;</pre>
+<div class="div2">
+<h3>
+<a name="_Toc77464329" id="_Toc77464329">4.1 Invalid Message
+Information Header</a>
+</h3>
+<p>A message information header cannot be
+processed.</p>
+<p class="TextIndented">
+<b>[Code]</b>
+S:Sender</p>
+<p class="TextIndented">
+<b>[Subcode]</b>
+wsa:InvalidMessageInformationHeader</p>
+<p class="TextIndented">
+<b>[Reason]</b> A
+message information header is not valid and the message cannot be
+processed.  The validity failure can be either structural or
+semantic, e.g. a [destination] that is not a URI or a
+[relationship] to a [message id] that was never issued.</p>
+<p class="TextIndented">
+<b>[Detail]</b> [invalid
+header]</p>
+</div>
+<div class="div2">
+<h3>
+<a name="_Toc77464330" id="_Toc77464330">
+</a>
+<a name="_Toc55895104" id="_Toc55895104">4.2 Message Information Header
+Required</a>
+</h3>
+<p>A required message information header is
+absent.</p>
+<p class="TextIndented">
+<b>[Code]</b>
+S:Sender</p>
+<p class="TextIndented">
+<b>[Subcode]</b>
+wsa:MessageInformationHeaderRequired</p>
+<p class="TextIndented">
+<b>[Reason]</b> A
+required message information header, To, MessageID, or Action, is
+not present.</p>
+<p class="TextIndented">
+<b>[Detail]</b> [Missing
+Header QName]</p>
+</div>
+<div class="div2">
+<h3>
+<a name="_Toc77464331" id="_Toc77464331">
+</a>
+<a name="_Toc55895105" id="_Toc55895105">4.3 Destination
+Unreachable</a>
+</h3>
+<p>The no endpoint can be found capable of acting
+in the role of the [destination] property.</p>
+<p class="TextIndented">
+<b>[Code]</b>
+S:Sender</p>
+<p class="TextIndented">
+<b>[Subcode]</b>
+wsa:DestinationUnreachable</p>
+<p class="TextIndented">
+<b>[Reason]</b> No route
+can be determined to reach the destination role defined by the
+WS-Addressing To.</p>
+<p class="TextIndented">
+<b>[Detail]</b>
+empty</p>
+</div>
+<div class="div2">
+<h3>
+<a name="_Toc55895108" id="_Toc55895108">
+</a>
+<a name="_Toc77464332" id="_Toc77464332">4.4 Action Not Supported</a>
+</h3>
+<p>The [action] property in the message is not
+supported at this endpoint.</p>
+<p>The contents of this fault are as follows:</p>
+<p class="TextIndented">
+<b>[Code]</b>
+S:Sender</p>
+<p class="TextIndented">
+<b>[Subcode]</b>
+wsa:ActionNotSupported</p>
+<p class="TextIndented">
+<b>[Reason]</b> The
+[action] cannot be processed at the receiver.</p>
+<p class="TextIndented">
+<b>[Detail]</b>
+[action]</p>
+</div>
+<div class="div2">
+<h3>
+<a name="_Toc77464333" id="_Toc77464333">4.5 Endpoint
+Unavailable</a>
+</h3>
+<p>The endpoint is unable to process the message
+at this time either due to some transient issue or a permanent
+failure. </p>
+<p>The endpoint may optionally include a
+RetryAfter parameter in the detail.  The source should not
+retransmit the message until this duration has passed.</p>
+<p class="TextIndented">
+<b>[Code]</b>
+S:Receiver</p>
+<p class="TextIndented">
+<b>[Subcode]</b>
+wsa:EndpointUnavailable</p>
+<p class="TextIndented">
+<b>[Reason]</b> The
+endpoint is unable to process the message at this time.</p>
+<p class="TextIndented">
+<b>[Detail]</b>
+<span class="Code">&lt;wsa:RetryAfter
+...&gt;[xs:NonNegativeInteger]&lt;/wsa:RetryAfter&gt;</span>
+</p><p>
+<a name="_Toc55895111" id="_Toc55895111">The
+following describes the attributes and elements listed
+above:</a>
+</p>
+<dl>
+<dt style="font-weight: normal;">/wsa:RetryAfter</dt>
+<dd>This element (of type <span class="CodeEmbedded">xs:NonNegativeInteger</span>) is a suggested minimum
+duration in milliseconds to wait before retransmitting the
+message.  If this element is omitted from the detail, the
+value is infinite.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">/wsa:RetryAfter/@{any}</dt>
+<dd>These optional extensibility attributes
+do not affect processing.</dd>
+</dl>
+</div>
+</div>
+<div class="div1">
+<h2>
+<a name="_Toc77464334" id="_Toc77464334">5. Security
+Considerations</a>
+</h2>
+<p>It is strongly recommended that the
+communication between services be secured using the mechanisms
+described in WS-Security [<a href="http://www.w3.org/Submission/ws-addressing/#WSSecurity">WS-Security</a>].
+ In order to properly secure messages, the body and all
+relevant headers need to be included in the signature. 
+Specifically, the message information headers described in this
+specification (e.g. &lt;wsa:To&gt;) need to be signed with the body
+in order to "bind" the two together.  It should be noted that
+for messages traveling through intermediaries, it is possible that
+some or all of the message information headers may have multiple
+signatures when the message arrives at the ultimate receiver. 
+It is strongly recommended that the initial sender include a
+signature to prevent any spoofing by intermediaries.</p>
+<p>Whenever an address is specified (e.g.
+&lt;wsa:From&gt;, &lt;wsa:ReplyTo&gt;, &lt;wsa:FaultTo&gt;, ...),
+the processor should ensure that a signature is provided with
+claims allowing it to speak for the specified target in order to
+prevent certain classes of attacks (e.g. redirects).  As well,
+care should be taken if the specified endpoint contains resource
+properties or parameters as unverified endpoint references could
+cause certain classes of header insertion attacks.</p>
+<p>The message information headers blocks may
+have their contents encrypted in order to obtain end-to-end
+privacy, but care should be taken to ensure that intermediary
+processors have access to required information (e.g.
+&lt;wsa:To&gt;).</p>
+<p>Some processors may use message identifiers
+(&lt;wsa:MessageID&gt;) as part of a uniqueness metric in order to
+detect replays of messages. Care should be taken to ensure that a
+unique identifier is actually used.  For example, it may be
+appropriate in some scenarios to combine the message identifier
+with a timestamp.</p>
+<p>The following list summarizes common classes
+of attacks that apply to this protocol and identifies the mechanism
+to prevent/mitigate the attacks:</p>
+<ul>
+<li>
+Message alteration – Alteration is prevented by including
+signatures of the message information using WS-Security.</li>
+</ul>
+<ul>
+<li>
+Message disclosure – Confidentiality is preserved by
+encrypting sensitive data using WS-Security.</li>
+</ul>
+<ul>
+<li>
+Address spoofing – Address spoofing is prevented by ensuring
+that all address are signed by a party authorized to speak for (or
+on behalf of) the address.</li>
+</ul>
+<ul>
+<li>
+Key integrity – Key integrity is maintained by using the
+strongest algorithms possible (by comparing secured policies
+– see WS-Policy [<a href="http://www.w3.org/Submission/ws-addressing/#WSPolicy">WS-Policy</a>] and
+WS-SecurityPolicy [<a href="http://www.w3.org/Submission/ws-addressing/#WSSecurityPolicy">WS-SecurityPolicy</a>]).</li>
+</ul>
+<ul>
+<li>
+Authentication – Authentication is established using the
+mechanisms described in WS-Security and WS-Trust [<a href="http://www.w3.org/Submission/ws-addressing/#WSTrust">WS-Trust</a>].  Each message is authenticated using
+the mechanisms described in WS-Security.</li>
+</ul>
+<ul>
+<li>
+Accountability – Accountability is a function of the type of
+and strength of the key and algorithms being used.  In many
+cases, a strong symmetric key provides sufficient accountability.
+However, in some environments, strong PKI signatures are
+required.</li>
+</ul>
+<ul>
+<li>
+Availability – All reliable messaging services are subject to
+a variety of availability attacks.  Replay detection is a
+common attack and it is recommended that this be addressed by the
+mechanisms described in WS-Security and/or caching of message
+identifiers.  Other attacks, such as network-level denial of
+service attacks are harder to avoid and are outside the scope of
+this specification.  That said, care should be taken to ensure
+that minimal state is saved prior to any authenticating
+sequences.</li>
+</ul>
+<ul>
+<li>
+Replay – Messages may be replayed for a variety of reasons.
+To detect and eliminate this attack, mechanisms should be used to
+identify replayed messages such as the timestamp/nonce outlined in
+WS-Security. Alternatively, and optionally, other technologies,
+such as sequencing, can also be used to prevent replay of
+application messages.</li>
+</ul>
+</div>
+<div class="div1">
+<h2>
+<a name="_Toc77464335" id="_Toc77464335">6.
+Acknowledgements</a>
+</h2>
+<p>Keith Ballinger, Microsoft; Michael Coulson,
+Microsoft; Giovanni Della-Libera, Microsoft; Christopher Ferris,
+IBM; Tom Freund, IBM; Steve Graham, IBM; Christoph Hofmann, SAP; Maryann Hondo, IBM; Efim
+Hudis, Microsoft; John Ibbotson, IBM; Gopal Kakivaya, Microsoft; Al
+Lee, Microsoft; Anthony Nadalin, IBM; Bill Nagy, IBM; Martin Nally,
+IBM; Henrik Frystyk Nielsen, Microsoft; Vladimir Savchenko, SAP; Jeffrey Schlimmer,
+Microsoft; Chris Sharp, IBM; Keith Stobie, Microsoft; Vladimir Videlov, SAP; Volker Wiechers, SAP; Hervey Wilson, Microsoft;
+</p>
+</div>
+<div class="div1">
+<h2>
+<a name="_Toc77464336" id="_Toc77464336">7. References</a>
+</h2>
+<dl>
+<dt style="font-weight: normal;">
+<b><a name="RFC2119" id="RFC2119">[RFC 2119]</a></b>
+</dt>
+<dd>S. Bradner, "Key words for use in RFCs to
+Indicate Requirement Levels," <a href="http://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>, Harvard
+University, March 1997.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<b><a name="RFC2396" id="RFC2396">[RFC 2396]</a></b>
+</dt>
+<dd>T. Berners-Lee, et al, "Uniform Resource Identifier (URI): Generic Syntax," <a href="http://www.ietf.org/internet-drafts/draft-fielding-uri-rfc2396bis-06.txt">RFC 2396bis</a>, W3C/MIT, July 2004.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<a name="XML10" id="XML10">
+</a>
+<b>[XML 1.0]</b>
+</dt>
+<dd>W3C Recommendation "<a href="http://www.w3.org/TR/2000/REC-xml-20001006">Extensible Markup
+Language (XML) 1.0 (Second Edition)</a>", Tim Bray, Jean Paoli, C.
+M. Sperberg-McQueen, Eve Maler, 6 October 2000</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<a name="XMLNamespaces" id="XMLNamespaces">
+</a>
+<b>[XML Namespaces]</b>
+</dt>
+<dd>W3C Recommendation "<a href="http://www.w3.org/TR/1999/REC-xml-names-19990114/">Namespaces in
+XML</a>", Tim Bray, Dave Hollander, Andrew Layman, 14 January
+1999</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<a name="XMLInfoset" id="XMLInfoset">
+</a>
+<b>[XML Infoset]</b>
+</dt>
+<dd>W3C Recommendation "<a href="http://www.w3.org/TR/2001/REC-xml-infoset-20011024/">XML
+Information Set</a>", John Cowan, Richard Tobin, 24 October
+2001</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<b>[<a name="XMLSchema1" id="XMLSchema1">XML Schema, Part 1</a>]</b>
+</dt>
+<dd>H. Thompson, et al, "<a href="http://www.w3.org/TR/xmlschema-1/">XML Schema Part 1:
+Structures</a>," May 2001.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<b>[<a name="XMLSchema2" id="XMLSchema2">XML Schema, Part 2</a>]</b>
+</dt>
+<dd>P. Biron, et al, "<a href="http://www.w3.org/TR/xmlschema-2/">XML Schema Part 2:
+Datatypes</a>," May 2001.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<a name="SOAP12" id="SOAP12">
+</a>
+<b>[SOAP 1.2]</b>
+</dt>
+<dd>M. Gudgin, et al, "<a href="http://www.w3.org/TR/soap12-part1/">SOAP Version 1.2 Part 1:
+Messaging Framework</a>," June 2003.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<b>[<a name="WSDL11" id="WSDL11">WSDL 1.1</a>]</b>
+</dt>
+<dd>E. Christensen, et al, "<a href="http://www.w3.org/TR/2001/NOTE-wsdl-20010315">Web Services
+Description Language (WSDL) 1.1</a>," March 2001.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<b>[<a name="WSSecurity" id="WSSecurity">WS-Security</a>]</b>
+</dt>
+<dd>OASIS, "<a href="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf">
+Web Services Security: SOAP Message Security</a>", March 2004.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<b>[<a name="WSSecurityPolicy" id="WSSecurityPolicy">WS-SecurityPolicy</a>]</b>
+</dt>
+<dd>G. Della-Libera, et al, "<a href="http://msdn.microsoft.com/ws/2002/12/ws-security-policy/">Web
+Services Security Policy Language (WS-SecurityPolicy)</a>,"
+December 2002.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<b>[<a name="WSTrust" id="WSTrust">WS-Trust</a>]</b>
+</dt>
+<dd>S. Anderson, et al, "<a href="http://msdn.microsoft.com/ws/2004/04/ws-trust/">Web Services Trust
+Language (WS-Trust)</a>," May 2004.</dd>
+</dl>
+<dl>
+<dt style="font-weight: normal;">
+<a name="WSPolicy" id="WSPolicy">
+</a>
+<b>[WS-Policy]</b>
+</dt>
+<dd>D. Box, et al, "<a href="http://msdn.microsoft.com/ws/2002/12/Policy/">Web Services Policy
+Framework (WS-Policy)</a>," May 2003.</dd>
+</dl>
+</div>
+
+</body></html>

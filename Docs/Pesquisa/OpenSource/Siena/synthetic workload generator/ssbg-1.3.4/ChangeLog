@@ -1,0 +1,106 @@
+2004-01-26  Antonio Carzaniga  <carzanig@cs.colorado.edu>
+
+	* Version 1.3.2: changed configure process, now using bootstrap
+	
+	* INSTALL, Makefile.am, bootstrap, configure.ac:
+	added aux_config dir and bootstrap script
+
+	* AUTHORS, COPYING, ChangeLog, INSTALL, Makefile.am, NEWS, README, attr_names.dist, bool_operators.dist, bool_values.dist, configure.ac, double_operators.dist, double_values.dist, gen_dictionary.cc, int_operators.dist, int_values.dist, io_exception.cc, ssbconf.h.in, ssbg.cc, ssbg.spec, ssbg_main.cc, string_operators.dist, string_values.dist, siena/ssbg.h, types.dist:
+	*** empty log message ***
+
+2003-07-16  Antonio Carzaniga  <carzanig@cs.colorado.edu>
+
+	* configure.ac:
+	changed some initialization macros to use newer autoconf
+	style/features; removed unused time header macro.
+
+	* ssbg_main.cc: added title and copyright blurb to usage message
+
+	* ssbg.cc:
+	fixed predicate generation to use constraint name distribution instead
+	of attribute name distribution.
+
+2003-06-28  Antonio Carzaniga  <carzanig@cs.colorado.edu>
+
+	* ssbg.spec: added missing files in bin/
+
+2003-06-11  rutherfo  <rutherfo@siena.cs.colorado.edu>
+
+	* ChangeLog: *** empty log message ***
+
+	* ssbg.cc: remove temporary debug statement
+
+	* siena/ssbg.h, ssbg_main.cc, ssbg.cc, configure.ac, configure:
+	added the reuse_types attribute to the SSBG class which is used to
+	enable reuse of the first type associated with a particular name for
+	subsequent occurances of the name in either constraints or attributes.
+
+	added the '--reuse-types' command line argument which controls the
+	use of the feature mentioned above for the ssbg executable.
+
+2003-06-11  rutherfo  <rutherfo@cs.colorado.edu>
+
+	* ssbg.cc: remove temporary debug statement
+
+	* siena/ssbg.h, ssbg_main.cc, ssbg.cc, configure.ac, configure:
+	added the reuse_types attribute to the SSBG class which is used to
+	enable reuse of the first type associated with a particular name for
+	subsequent occurances of the name in either constraints or attributes.
+
+	added the '--reuse-types' command line argument which controls the
+	use of the feature mentioned above for the ssbg executable.
+
+2003-06-10  rutherfo  <rutherfo@cs.colorado.edu>
+
+	* ssbg.spec, Makefile.in, Makefile.am:
+	updated the RPM spec and added the new distribution files to
+	the EXTRA_DIST list.
+	
+2003-06-10  rutherfo  <rutherfo@cs.colorado.edu>
+
+	* siena/ssbg.h, types.dist, string_values.dist, string_operators.dist, ssbg_main.cc, ssbg.cc, Makefile.in, int_operators.dist, double_values.dist, double_operators.dist, configure.ac, configure, bool_operators.dist:
+	added support for double attribute and constraint types.
+
+	changed so that each recognized type (bool, double, int, string)
+	has its own operator distribution.
+
+	* str_values.dist: moved: str_values.dist -> string_values.dist
+
+	this was done to keep the names consistent between the default
+	operator distribution file names and the default value distribution
+	files.
+
+	* operators.dist: moved: operators.dist -> int_operators.dist
+
+2003-06-08  rutherfo  <rutherfo@cs.colorado.edu>
+
+	* AUTHORS, Makefile.in, README, aclocal.m4, configure:
+	added rutherfo to AUTHORS and README
+
+	Upgraded build system as follows:
+
+	autoconf 2.57
+	automake 1.7.4
+
+2003-06-06  rutherfo  <rutherfo@cs.colorado.edu>
+
+	* Makefile.am, Makefile.in, constr_names.dist, io_exception.cc, siena/io_exception.h, siena/ssbg.h, siena/wset.h, ssbg.cc, ssbg_main.cc:
+	remove siena/io_exception.h and siena/wset.h and incorporated them
+	into the siena/ssbg.h to improve the coherency of the installed
+	package.  Changed new_filter to new_predicate and incorporated the
+	filters_min and filters_max into the SSBG class.
+
+2003-06-06  carzanig  <carzanig@cs.colorado.edu>
+
+	* aclocal.m4, attr_names.dist, bool_values.dist, config.guess, config.sub, configure, configure.ac, depcomp, gen_dictionary.cc, install-sh, int_values.dist, io_exception.cc, ltmain.sh, missing, mkinstalldirs, operators.dist, siena/io_exception.h, siena/ssbg.h, siena/wset.h, ssbconf.h.in, ssbg.cc, ssbg.spec, ssbg_main.cc, str_values.dist, string_operators.dist, types.dist:
+	New file.
+
+	* aclocal.m4, attr_names.dist, bool_values.dist, config.guess, config.sub, configure, configure.ac, depcomp, gen_dictionary.cc, install-sh, int_values.dist, io_exception.cc, ltmain.sh, missing, mkinstalldirs, operators.dist, siena/io_exception.h, siena/ssbg.h, siena/wset.h, ssbconf.h.in, ssbg.cc, ssbg.spec, ssbg_main.cc, str_values.dist, string_operators.dist, types.dist:
+	bootstrap version
+
+	* AUTHORS, COPYING, ChangeLog, INSTALL, Makefile.am, Makefile.in, NEWS, README:
+	New file.
+
+	* AUTHORS, COPYING, ChangeLog, INSTALL, Makefile.am, Makefile.in, NEWS, README:
+	bootstrap version
+

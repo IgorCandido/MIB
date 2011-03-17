@@ -1,0 +1,12 @@
+#! /bin/sh
+#
+# $Id: bootstrap,v 1.1 2004/01/26 19:09:06 carzanig Exp $
+#
+config_aux_dir=config
+rm -rf configure autom4te.cache "$config_aux_dir"
+mkdir "$config_aux_dir"
+aclocal
+libtoolize -f -c
+autoheader
+automake -f -a -c
+autoconf
