@@ -46,20 +46,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlackBox\Blackbox.cs" />
-    <Compile Include="Interfaces\IClientNode.cs" />
-    <Compile Include="Interfaces\EventContract.cs" />
-    <Compile Include="Interfaces\IBlackbox.cs" />
-    <Compile Include="Interfaces\IEmitter.cs" />
-    <Compile Include="Interfaces\IReceiver.cs" />
-    <Compile Include="Interfaces\SubscriptionContract.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Host.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TCP_Receiver_Emitter\TcpClientNode.cs" />
-    <Compile Include="TCP_Receiver_Emitter\TcpEmitter.cs" />
-    <Compile Include="TCP_Receiver_Emitter\TcpReceiver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\First_Interfaces\First_Interfaces.csproj">
+      <Project>{996E5588-81BB-4A84-A2A6-0C712ECE79F0}</Project>
+      <Name>First_Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
