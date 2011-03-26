@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "First", "First\First.csproj", "{C1ADD5D1-E944-4FF4-B2EE-98DE68C0077A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "First_Projects", "First_Projects", "{2A4C61C3-B274-4899-A6C1-A2DCE4B1B584}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "First_Interfaces", "First_Interfaces\First_Interfaces.csproj", "{996E5588-81BB-4A84-A2A6-0C712ECE79F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "First_Client", "First_Client\First_Client.csproj", "{610353C0-2776-4C29-A068-A9D1F1019D84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "First_TcpReceiver", "First_TcpReceiver\First_TcpReceiver.csproj", "{4D16BCCB-0B59-46A1-AADE-5091384FF9C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "First_TcpEmitter", "First_TcpEmitter\First_TcpEmitter.csproj", "{6C6B34EA-D164-483A-83C4-45E538E286E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1ADD5D1-E944-4FF4-B2EE-98DE68C0077A}.Debug|x86.ActiveCfg = Debug|x86
+		{C1ADD5D1-E944-4FF4-B2EE-98DE68C0077A}.Debug|x86.Build.0 = Debug|x86
+		{C1ADD5D1-E944-4FF4-B2EE-98DE68C0077A}.Release|x86.ActiveCfg = Release|x86
+		{C1ADD5D1-E944-4FF4-B2EE-98DE68C0077A}.Release|x86.Build.0 = Release|x86
+		{996E5588-81BB-4A84-A2A6-0C712ECE79F0}.Debug|x86.ActiveCfg = Debug|x86
+		{996E5588-81BB-4A84-A2A6-0C712ECE79F0}.Debug|x86.Build.0 = Debug|x86
+		{996E5588-81BB-4A84-A2A6-0C712ECE79F0}.Release|x86.ActiveCfg = Release|x86
+		{996E5588-81BB-4A84-A2A6-0C712ECE79F0}.Release|x86.Build.0 = Release|x86
+		{610353C0-2776-4C29-A068-A9D1F1019D84}.Debug|x86.ActiveCfg = Debug|x86
+		{610353C0-2776-4C29-A068-A9D1F1019D84}.Debug|x86.Build.0 = Debug|x86
+		{610353C0-2776-4C29-A068-A9D1F1019D84}.Release|x86.ActiveCfg = Release|x86
+		{610353C0-2776-4C29-A068-A9D1F1019D84}.Release|x86.Build.0 = Release|x86
+		{4D16BCCB-0B59-46A1-AADE-5091384FF9C0}.Debug|x86.ActiveCfg = Debug|x86
+		{4D16BCCB-0B59-46A1-AADE-5091384FF9C0}.Debug|x86.Build.0 = Debug|x86
+		{4D16BCCB-0B59-46A1-AADE-5091384FF9C0}.Release|x86.ActiveCfg = Release|x86
+		{4D16BCCB-0B59-46A1-AADE-5091384FF9C0}.Release|x86.Build.0 = Release|x86
+		{6C6B34EA-D164-483A-83C4-45E538E286E2}.Debug|x86.ActiveCfg = Debug|x86
+		{6C6B34EA-D164-483A-83C4-45E538E286E2}.Debug|x86.Build.0 = Debug|x86
+		{6C6B34EA-D164-483A-83C4-45E538E286E2}.Release|x86.ActiveCfg = Release|x86
+		{6C6B34EA-D164-483A-83C4-45E538E286E2}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C1ADD5D1-E944-4FF4-B2EE-98DE68C0077A} = {2A4C61C3-B274-4899-A6C1-A2DCE4B1B584}
+		{996E5588-81BB-4A84-A2A6-0C712ECE79F0} = {2A4C61C3-B274-4899-A6C1-A2DCE4B1B584}
+		{610353C0-2776-4C29-A068-A9D1F1019D84} = {2A4C61C3-B274-4899-A6C1-A2DCE4B1B584}
+		{4D16BCCB-0B59-46A1-AADE-5091384FF9C0} = {2A4C61C3-B274-4899-A6C1-A2DCE4B1B584}
+		{6C6B34EA-D164-483A-83C4-45E538E286E2} = {2A4C61C3-B274-4899-A6C1-A2DCE4B1B584}
+	EndGlobalSection
+EndGlobal
