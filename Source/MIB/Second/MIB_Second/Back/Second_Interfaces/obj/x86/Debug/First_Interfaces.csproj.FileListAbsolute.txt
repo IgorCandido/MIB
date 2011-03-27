@@ -1,5 +1,0 @@
-C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\First_Interfaces\bin\Debug\First_Interfaces.dll
-C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\First_Interfaces\bin\Debug\First_Interfaces.pdb
-C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\First_Interfaces\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\First_Interfaces\obj\x86\Debug\First_Interfaces.dll
-C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\First_Interfaces\obj\x86\Debug\First_Interfaces.pdb
