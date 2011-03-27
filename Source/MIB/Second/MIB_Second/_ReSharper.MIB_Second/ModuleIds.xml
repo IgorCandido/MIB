@@ -1,0 +1,20 @@
+<Modules>
+  <Module PersistentId="d:Miscellaneous Files" ModuleId="Microsoft.CSharp" />
+  <Module PersistentId="C7A47328-0578-47A4-BFDB-13ADE55F02E6" ModuleId="Blackbox" />
+  <Module PersistentId="19B9613E-9556-49BA-A2C7-B0760C1CA921" ModuleId="Interfaces" />
+  <Module PersistentId="3413BEA9-87DF-4C1F-AD9F-063F5B27CB3C" ModuleId="TcpEmitter" />
+  <Module PersistentId="77B783FD-E393-4340-BE83-98C5A08BF014" ModuleId="TcpReceiver" />
+  <Module PersistentId="44DBCA66-7B03-41AF-A9D0-D3D635B5B806" ModuleId="TcpClient" />
+  <Module PersistentId="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="mscorlib" />
+  <Module PersistentId="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System" />
+  <Module PersistentId="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Core" />
+  <Module PersistentId="System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.ServiceModel" />
+  <Module PersistentId="System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Xml.Linq" />
+  <Module PersistentId="System.Data.DataSetExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Data.DataSetExtensions" />
+  <Module PersistentId="Microsoft.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" ModuleId="Microsoft.CSharp_1" />
+  <Module PersistentId="System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Data" />
+  <Module PersistentId="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Xml" />
+  <Module PersistentId="System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Runtime.Serialization" />
+  <Module PersistentId="System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" ModuleId="System.Configuration" />
+  <Module PersistentId="JetBrains.Annotations, Version=5.1.3000.12, Culture=neutral, PublicKeyToken=1010a0d8d6380325" ModuleId="JetBrains.Annotations" />
+</Modules>

@@ -1,0 +1,5 @@
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\Second_Interfaces\bin\Release\Second.Interfaces.dll
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\Second_Interfaces\bin\Release\Second.Interfaces.pdb
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\Second_Interfaces\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\Second_Interfaces\obj\x86\Release\Second.Interfaces.dll
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\Second_Interfaces\obj\x86\Release\Second.Interfaces.pdb

@@ -1,0 +1,8 @@
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\TcpEmitter\bin\Debug\TcpEmitter.exe.config
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\TcpEmitter\bin\Debug\TcpEmitter.exe
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\TcpEmitter\bin\Debug\TcpEmitter.pdb
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\TcpEmitter\bin\Debug\Interfaces.dll
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\TcpEmitter\bin\Debug\Interfaces.pdb
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\TcpEmitter\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\TcpEmitter\obj\x86\Debug\TcpEmitter.exe
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\TcpEmitter\obj\x86\Debug\TcpEmitter.pdb

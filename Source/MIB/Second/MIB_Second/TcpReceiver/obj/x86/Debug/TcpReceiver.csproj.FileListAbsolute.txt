@@ -1,0 +1,8 @@
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\TcpReceiver\bin\Debug\TcpReceiver.exe.config
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\TcpReceiver\bin\Debug\TcpReceiver.exe
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\TcpReceiver\bin\Debug\TcpReceiver.pdb
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\TcpReceiver\bin\Debug\Interfaces.dll
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\TcpReceiver\bin\Debug\Interfaces.pdb
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\TcpReceiver\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\TcpReceiver\obj\x86\Debug\TcpReceiver.exe
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Second\MIB_Second\TcpReceiver\obj\x86\Debug\TcpReceiver.pdb

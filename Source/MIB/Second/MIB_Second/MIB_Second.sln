@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackbox", "Blackbox\Blackbox.csproj", "{C7A47328-0578-47A4-BFDB-13ADE55F02E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{19B9613E-9556-49BA-A2C7-B0760C1CA921}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpEmitter", "TcpEmitter\TcpEmitter.csproj", "{3413BEA9-87DF-4C1F-AD9F-063F5B27CB3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpReceiver", "TcpReceiver\TcpReceiver.csproj", "{77B783FD-E393-4340-BE83-98C5A08BF014}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpClient", "TcpClient\TcpClient.csproj", "{44DBCA66-7B03-41AF-A9D0-D3D635B5B806}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7A47328-0578-47A4-BFDB-13ADE55F02E6}.Debug|x86.ActiveCfg = Debug|x86
+		{C7A47328-0578-47A4-BFDB-13ADE55F02E6}.Debug|x86.Build.0 = Debug|x86
+		{C7A47328-0578-47A4-BFDB-13ADE55F02E6}.Release|x86.ActiveCfg = Release|x86
+		{C7A47328-0578-47A4-BFDB-13ADE55F02E6}.Release|x86.Build.0 = Release|x86
+		{19B9613E-9556-49BA-A2C7-B0760C1CA921}.Debug|x86.ActiveCfg = Debug|x86
+		{19B9613E-9556-49BA-A2C7-B0760C1CA921}.Debug|x86.Build.0 = Debug|x86
+		{19B9613E-9556-49BA-A2C7-B0760C1CA921}.Release|x86.ActiveCfg = Release|x86
+		{19B9613E-9556-49BA-A2C7-B0760C1CA921}.Release|x86.Build.0 = Release|x86
+		{3413BEA9-87DF-4C1F-AD9F-063F5B27CB3C}.Debug|x86.ActiveCfg = Debug|x86
+		{3413BEA9-87DF-4C1F-AD9F-063F5B27CB3C}.Debug|x86.Build.0 = Debug|x86
+		{3413BEA9-87DF-4C1F-AD9F-063F5B27CB3C}.Release|x86.ActiveCfg = Release|x86
+		{3413BEA9-87DF-4C1F-AD9F-063F5B27CB3C}.Release|x86.Build.0 = Release|x86
+		{77B783FD-E393-4340-BE83-98C5A08BF014}.Debug|x86.ActiveCfg = Debug|x86
+		{77B783FD-E393-4340-BE83-98C5A08BF014}.Debug|x86.Build.0 = Debug|x86
+		{77B783FD-E393-4340-BE83-98C5A08BF014}.Release|x86.ActiveCfg = Release|x86
+		{77B783FD-E393-4340-BE83-98C5A08BF014}.Release|x86.Build.0 = Release|x86
+		{44DBCA66-7B03-41AF-A9D0-D3D635B5B806}.Debug|x86.ActiveCfg = Debug|x86
+		{44DBCA66-7B03-41AF-A9D0-D3D635B5B806}.Debug|x86.Build.0 = Debug|x86
+		{44DBCA66-7B03-41AF-A9D0-D3D635B5B806}.Release|x86.ActiveCfg = Release|x86
+		{44DBCA66-7B03-41AF-A9D0-D3D635B5B806}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
