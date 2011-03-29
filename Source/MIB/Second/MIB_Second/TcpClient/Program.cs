@@ -7,7 +7,7 @@ using Interfaces.Contracts;
 using Interfaces.Factories;
 using Interfaces.Services;
 using Interfaces.Tcp;
-using Interfaces.TcpClientObjects;
+using Interfaces.Tcp.ClientObjects;
 
 namespace TcpClient
 {
@@ -68,7 +68,7 @@ namespace TcpClient
 
             //receiver.Receive(new EventContract() {topic = "teste" , data = stream.GetBuffer()});
 
-            EventContract eventObj = new EventContract() { topic = "teste", data = stream.GetBuffer() };
+            EventContract eventObj = new EventContract() { Topic = "teste", Data = stream.GetBuffer() };
 
             stream = new MemoryStream();
 

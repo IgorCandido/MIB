@@ -1,0 +1,8 @@
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\First_Client\bin\Debug\First_Client.exe
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\First_Client\bin\Debug\First_Client.pdb
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\First_Client\bin\Debug\First_Interfaces.dll
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\First_Client\bin\Debug\First_Interfaces.pdb
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\First_Client\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\First_Client\obj\x86\Debug\First_Client.exe
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\First_Client\obj\x86\Debug\First_Client.pdb
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\First_Client\bin\Debug\First_Client.exe.config

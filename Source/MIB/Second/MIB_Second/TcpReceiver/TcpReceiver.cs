@@ -8,7 +8,7 @@ using Interfaces.Contracts;
 using Interfaces.Factories;
 using Interfaces.Services;
 using Interfaces.Tcp;
-using Interfaces.TcpClientObjects;
+using Interfaces.Tcp.ClientObjects;
 
 namespace TcpReceiver
 {
@@ -36,7 +36,7 @@ namespace TcpReceiver
         public void Receive(EventContract eventContract)
         {
             
-            Blackbox.Receive(eventContract.topic, eventContract.data);
+            Blackbox.Receive(eventContract.Topic, eventContract.Data);
 
         }
 
@@ -79,7 +79,7 @@ namespace TcpReceiver
                         if( ( eventObj = formatter.Deserialize(deserializationStream) as EventContract ) != null )
                         {
                             
-                            Blackbox.Receive(eventObj.topic, eventObj.data);
+                            Blackbox.Receive(eventObj.Topic, eventObj.Data);
 
                         }
 

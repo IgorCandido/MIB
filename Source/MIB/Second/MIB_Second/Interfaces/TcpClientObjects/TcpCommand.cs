@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Runtime.Serialization;
-using Interfaces.Tcp;
 
 namespace Interfaces.Tcp
 {
@@ -12,7 +11,7 @@ namespace Interfaces.Tcp
 
 }
 
-namespace Interfaces.TcpClientObjects
+namespace Interfaces.Tcp.ClientObjects
 {
     [Serializable]
     public class TcpCommand : ISerializable

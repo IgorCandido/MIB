@@ -1,0 +1,311 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">True</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="4D16BCCB-0B59-46A1-AADE-5091384FF9C0/f:Host.cs" caret="418" fromTop="18" />
+      <File id="C1ADD5D1-E944-4FF4-B2EE-98DE68C0077A/f:Host.cs" caret="290" fromTop="8" />
+      <File id="6C6B34EA-D164-483A-83C4-45E538E286E2/f:Host.cs" caret="379" fromTop="16" />
+      <File id="996E5588-81BB-4A84-A2A6-0C712ECE79F0/d:ClientNodeInformationTypes/f:TcpClientInformation.cs" caret="964" fromTop="12" />
+      <File id="996E5588-81BB-4A84-A2A6-0C712ECE79F0/d:ClientNodeInformationTypes/f:ClientInformation.cs" caret="155" fromTop="7" />
+      <File id="996E5588-81BB-4A84-A2A6-0C712ECE79F0/d:Contracts/f:EventContract.cs" caret="171" fromTop="8" />
+      <File id="996E5588-81BB-4A84-A2A6-0C712ECE79F0/d:Contracts/f:ClientInformationContract.cs" caret="190" fromTop="9" />
+      <File id="996E5588-81BB-4A84-A2A6-0C712ECE79F0/d:Contracts/f:SubscriptionContract.cs" caret="475" fromTop="20" />
+      <File id="996E5588-81BB-4A84-A2A6-0C712ECE79F0/d:ServiceInterfaces/f:IEmitter.cs" caret="248" fromTop="9" />
+      <File id="996E5588-81BB-4A84-A2A6-0C712ECE79F0/d:ServiceInterfaces/f:IReceiver.cs" caret="65" fromTop="3" />
+      <File id="996E5588-81BB-4A84-A2A6-0C712ECE79F0/d:Factories/f:ProxyFactory.cs" caret="279" fromTop="14" />
+      <File id="610353C0-2776-4C29-A068-A9D1F1019D84/f:App.config" caret="301" fromTop="9" />
+      <File id="6C6B34EA-D164-483A-83C4-45E538E286E2/f:App.config" caret="614" fromTop="16" />
+      <File id="4D16BCCB-0B59-46A1-AADE-5091384FF9C0/f:App.config" caret="1050" fromTop="31" />
+      <File id="996E5588-81BB-4A84-A2A6-0C712ECE79F0/d:ServiceInterfaces/f:IBlackbox.cs" caret="224" fromTop="8" />
+      <File id="C1ADD5D1-E944-4FF4-B2EE-98DE68C0077A/f:App.config" caret="1071" fromTop="15" />
+      <File id="996E5588-81BB-4A84-A2A6-0C712ECE79F0/d:ClientNodeInformationTypes/f:TcpClientInformationAdapter.cs" caret="403" fromTop="1" />
+      <File id="C1ADD5D1-E944-4FF4-B2EE-98DE68C0077A/d:BlackBox/f:Blackbox.cs" caret="1390" fromTop="25" />
+      <File id="4D16BCCB-0B59-46A1-AADE-5091384FF9C0/f:TcpReceiver.cs" caret="735" fromTop="26" />
+      <File id="6C6B34EA-D164-483A-83C4-45E538E286E2/f:TcpEmitter.cs" caret="1321" fromTop="12" />
+      <File id="610353C0-2776-4C29-A068-A9D1F1019D84/f:Program.cs" caret="2504" fromTop="15" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="6C6B34EA-D164-483A-83C4-45E538E286E2/f:TcpEmitter.cs" caret="879" fromTop="15" />
+      <File id="996E5588-81BB-4A84-A2A6-0C712ECE79F0/d:ServiceInterfaces/f:IEmitter.cs" caret="248" fromTop="8" />
+      <File id="4D16BCCB-0B59-46A1-AADE-5091384FF9C0/f:TcpReceiver.cs" caret="1105" fromTop="16" />
+      <File id="996E5588-81BB-4A84-A2A6-0C712ECE79F0/d:ServiceInterfaces/f:IBlackbox.cs" caret="376" fromTop="14" />
+      <File id="C1ADD5D1-E944-4FF4-B2EE-98DE68C0077A/d:BlackBox/f:Blackbox.cs" caret="1128" fromTop="16" />
+      <File id="996E5588-81BB-4A84-A2A6-0C712ECE79F0/d:ClientNodeInformationTypes/f:ClientInformation.cs" caret="155" fromTop="7" />
+      <File id="996E5588-81BB-4A84-A2A6-0C712ECE79F0/d:Contracts/f:ClientInformationContract.cs" caret="42" fromTop="2" />
+      <File id="996E5588-81BB-4A84-A2A6-0C712ECE79F0/d:Contracts/f:ClientInformationContract.cs" caret="190" fromTop="9" />
+      <File id="996E5588-81BB-4A84-A2A6-0C712ECE79F0/d:Contracts/f:SubscriptionContract.cs" caret="475" fromTop="20" />
+      <File id="4D16BCCB-0B59-46A1-AADE-5091384FF9C0/f:App.config" caret="1050" fromTop="31" />
+      <File id="610353C0-2776-4C29-A068-A9D1F1019D84/f:App.config" caret="301" fromTop="9" />
+      <File id="C1ADD5D1-E944-4FF4-B2EE-98DE68C0077A/d:BlackBox/f:Blackbox.cs" caret="1967" fromTop="12" />
+      <File id="C1ADD5D1-E944-4FF4-B2EE-98DE68C0077A/d:BlackBox/f:Blackbox.cs" caret="2115" fromTop="17" />
+      <File id="C1ADD5D1-E944-4FF4-B2EE-98DE68C0077A/d:BlackBox/f:Blackbox.cs" caret="1946" fromTop="20" />
+      <File id="C1ADD5D1-E944-4FF4-B2EE-98DE68C0077A/d:BlackBox/f:Blackbox.cs" caret="929" fromTop="6" />
+      <File id="996E5588-81BB-4A84-A2A6-0C712ECE79F0/d:ServiceInterfaces/f:IBlackbox.cs" caret="224" fromTop="8" />
+      <File id="C1ADD5D1-E944-4FF4-B2EE-98DE68C0077A/d:BlackBox/f:Blackbox.cs" caret="425" fromTop="5" />
+      <File id="996E5588-81BB-4A84-A2A6-0C712ECE79F0/d:ClientNodeInformationTypes/f:TcpClientInformationAdapter.cs" caret="1466" fromTop="20" />
+      <File id="C1ADD5D1-E944-4FF4-B2EE-98DE68C0077A/d:BlackBox/f:Blackbox.cs" caret="707" fromTop="16" />
+      <File id="610353C0-2776-4C29-A068-A9D1F1019D84/f:Program.cs" caret="959" fromTop="21" />
+      <File id="610353C0-2776-4C29-A068-A9D1F1019D84/f:Program.cs" caret="959" fromTop="29" />
+      <File id="610353C0-2776-4C29-A068-A9D1F1019D84/f:Program.cs" caret="959" fromTop="24" />
+      <File id="610353C0-2776-4C29-A068-A9D1F1019D84/f:Program.cs" caret="1939" fromTop="12" />
+      <File id="610353C0-2776-4C29-A068-A9D1F1019D84/f:Program.cs" caret="2504" fromTop="8" />
+      <File id="610353C0-2776-4C29-A068-A9D1F1019D84/f:Program.cs" caret="960" fromTop="6" />
+      <File id="610353C0-2776-4C29-A068-A9D1F1019D84/f:Program.cs" caret="794" fromTop="13" />
+      <File id="610353C0-2776-4C29-A068-A9D1F1019D84/f:Program.cs" caret="1870" fromTop="25" />
+      <File id="610353C0-2776-4C29-A068-A9D1F1019D84/f:Program.cs" caret="2338" fromTop="16" />
+      <File id="6C6B34EA-D164-483A-83C4-45E538E286E2/f:TcpEmitter.cs" caret="1303" fromTop="12" />
+      <File id="6C6B34EA-D164-483A-83C4-45E538E286E2/f:TcpEmitter.cs" caret="1188" fromTop="9" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="IReceiver`0" priority="0" />
+      <Item value="void" priority="6" />
+      <Item value="String`0" priority="11" />
+      <Item value="object" priority="5" />
+      <Item value="socket" priority="3" />
+      <Item value="new" priority="22" />
+      <Item value="Socket" priority="0" />
+      <Item value="TcpClient`0" priority="1" />
+      <Item value="int" priority="5" />
+      <Item value="public" priority="22" />
+      <Item value="DataMember" priority="4" />
+      <Item value="OperationContract" priority="2" />
+      <Item value="eventContract" priority="2" />
+      <Item value="subscriptionContract" priority="8" />
+      <Item value="Hashtable" priority="1" />
+      <Item value="if" priority="5" />
+      <Item value="subscriptions" priority="6" />
+      <Item value="is" priority="1" />
+      <Item value="as" priority="7" />
+      <Item value="List" priority="2" />
+      <Item value="ClientNode`0" priority="8" />
+      <Item value="contentOfSubscriptionTable" priority="0" />
+      <Item value="string" priority="3" />
+      <Item value="ClientNode" priority="0" />
+      <Item value="hostname" priority="3" />
+      <Item value="port" priority="4" />
+      <Item value="null" priority="0" />
+      <Item value="System" priority="1" />
+      <Item value="Console`0" priority="7" />
+      <Item value="override" priority="3" />
+      <Item value="obj" priority="0" />
+      <Item value="clientNode" priority="7" />
+      <Item value="return" priority="6" />
+      <Item value="this" priority="0" />
+      <Item value="emitterType" priority="5" />
+      <Item value="subscriptionsTable" priority="1" />
+      <Item value="topic" priority="4" />
+      <Item value="Hashtable`0" priority="0" />
+      <Item value="foreach" priority="0" />
+      <Item value="IEmitter`0" priority="2" />
+      <Item value="clientInformation" priority="11" />
+      <Item value="emittersTable" priority="1" />
+      <Item value="emitter" priority="0" />
+      <Item value="TcpClientNode`0" priority="11" />
+      <Item value="private" priority="0" />
+      <Item value="Emit`0" priority="0" />
+      <Item value="BlackBox" priority="4" />
+      <Item value="TcpEmitter`0" priority="1" />
+      <Item value="TcpReceiver`0" priority="1" />
+      <Item value="blackbox" priority="4" />
+      <Item value="client" priority="6" />
+      <Item value="TcpClient" priority="0" />
+      <Item value="data" priority="1" />
+      <Item value="binaryFormatter" priority="2" />
+      <Item value="BinaryFormatter" priority="0" />
+      <Item value="ConcurrencyMode`0" priority="0" />
+      <Item value="InstanceContext`0" priority="2" />
+      <Item value="InstanceContextMode`0" priority="2" />
+      <Item value="OperationBehavior" priority="0" />
+      <Item value="ReleaseInstanceMode" priority="0" />
+      <Item value="ReleaseInstanceMode`0" priority="0" />
+      <Item value="TransactionAutoComplete" priority="1" />
+      <Item value="false" priority="0" />
+      <Item value="ServiceHost" priority="0" />
+      <Item value="typeof" priority="0" />
+      <Item value="Blackbox`0" priority="3" />
+      <Item value="svc" priority="0" />
+      <Item value="TCP_Receiver_Emitter" priority="0" />
+      <Item value="static" priority="6" />
+      <Item value="IBlackbox" priority="0" />
+      <Item value="class" priority="0" />
+      <Item value="Blackbox_Container`0" priority="0" />
+      <Item value="IBlackbox`0" priority="1" />
+      <Item value="_blackbox" priority="0" />
+      <Item value="Blackbox" priority="0" />
+      <Item value="BlackboxClient`0" priority="0" />
+      <Item value="ThreadStaticAttribute`0" priority="0" />
+      <Item value="T`0" priority="1" />
+      <Item value="clientName" priority="1" />
+      <Item value="ProxyFactory`0" priority="1" />
+      <Item value="receiver" priority="1" />
+      <Item value="SubscriptionContract" priority="0" />
+      <Item value="IClientNode" priority="0" />
+      <Item value="info" priority="0" />
+      <Item value="SubscriptionContract`0" priority="0" />
+      <Item value="byte" priority="4" />
+      <Item value="formater" priority="1" />
+      <Item value="BinaryFormater" priority="0" />
+      <Item value="MemoryStream`0" priority="1" />
+      <Item value="tcpClientNode" priority="4" />
+      <Item value="TcpClientNode" priority="0" />
+      <Item value="reader" priority="1" />
+      <Item value="ClientInformationContract`0" priority="1" />
+      <Item value="clientInformationContract" priority="1" />
+      <Item value="writer" priority="8" />
+      <Item value="TcpClientInformationAdapter`0" priority="0" />
+      <Item value="EventContract" priority="0" />
+      <Item value="InstanceContextMode" priority="0" />
+      <Item value="serializationStream" priority="0" />
+      <Item value="Net" priority="0" />
+      <Item value="Sockets" priority="0" />
+      <Item value="tcpListener" priority="4" />
+      <Item value="TcpListener" priority="0" />
+      <Item value="ar" priority="3" />
+      <Item value="TcpListener`0" priority="1" />
+      <Item value="list" priority="0" />
+      <Item value="numberOfBytesRead" priority="0" />
+      <Item value="NetworkStream`0" priority="1" />
+      <Item value="myReadBuffer" priority="0" />
+      <Item value="myNetworkStream" priority="1" />
+      <Item value="RankException`0" priority="0" />
+      <Item value="IAsyncResult`0" priority="0" />
+      <Item value="DoIt`0" priority="0" />
+      <Item value="BinaryWriter" priority="0" />
+      <Item value="NetworkStream" priority="0" />
+      <Item value="stream" priority="0" />
+      <Item value="BinaryReader`0" priority="0" />
+      <Item value="BinaryReader" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Hashtable">
+      <Item value="Indexer" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:First.Interfaces.SubscriptionContract">
+      <Item value="Equals`0" priority="0" />
+      <Item value="topic" priority="1" />
+      <Item value="hostname" priority="1" />
+      <Item value="port" priority="1" />
+      <Item value="emitType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Contains`0" priority="0" />
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="WriteLine`0" priority="4" />
+      <Item value="Write`0" priority="0" />
+      <Item value="Title" priority="0" />
+      <Item value="ReadKey`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:First.BlackBox.ClientNode">
+      <Item value="hostname" priority="2" />
+      <Item value="port" priority="1" />
+      <Item value="emitterType" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:First.Interfaces.IEmitter">
+      <Item value="Emit`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:First.BlackBox.Blackbox">
+      <Item value="Receive`0" priority="0" />
+      <Item value="Subscribe`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:First.Interfaces.EventContract">
+      <Item value="data" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:First.TCP_Receiver_Emitter.TcpClientNode">
+      <Item value="hostname" priority="1" />
+      <Item value="port" priority="2" />
+      <Item value="emitterType" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.Sockets.TcpClient">
+      <Item value="Connect`0" priority="0" />
+      <Item value="GetStream`0" priority="3" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.Sockets.NetworkStream">
+      <Item value="Write`0" priority="0" />
+      <Item value="Flush`0" priority="0" />
+      <Item value="ToString`0" priority="0" />
+      <Item value="DataAvailable" priority="0" />
+      <Item value="Length" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter">
+      <Item value="Serialize`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.ServiceModel.ConcurrencyMode">
+      <Item value="Single" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.ServiceModel.InstanceContextMode">
+      <Item value="PerCall" priority="0" />
+      <Item value="Single" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.ServiceModel.ServiceHost">
+      <Item value="Open`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.ServiceModel.ChannelFactory`1">
+      <Item value="CreateChannel`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@First_Interfaces.ProxyFactory">
+      <Item value="GetProxy`1" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:First_Interfaces.ServiceInterfaces.IReceiver">
+      <Item value="Subscribe`0" priority="0" />
+      <Item value="Receive`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.BinaryReader">
+      <Item value="ReadSingle`0" priority="0" />
+      <Item value="ReadString`0" priority="1" />
+      <Item value="ReadInt32`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.BinaryWriter">
+      <Item value="Write`0" priority="2" />
+      <Item value="Flush`0" priority="1" />
+      <Item value="Close`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:First_Interfaces.ClientNodeInformationTypes.ClientInformationContract">
+      <Item value="specificClientInformation" priority="1" />
+      <Item value="emitterType" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@First_Interfaces.ClientNodeInformationTypes.TcpClientInformationAdapter">
+      <Item value="ConstructFromData`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:First_Interfaces.Contracts.ClientInformationContract">
+      <Item value="SpecificClientInformation" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.MemoryStream">
+      <Item value="ToArray`0" priority="0" />
+      <Item value="GetBuffer`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Net.Dns">
+      <Item value="GetHostEntry`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.Sockets.TcpListener">
+      <Item value="Start`0" priority="0" />
+      <Item value="BeginAcceptSocket`0" priority="0" />
+      <Item value="BeginAcceptTcpClient`0" priority="0" />
+      <Item value="EndAcceptTcpClient`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IAsyncResult">
+      <Item value="AsyncState" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

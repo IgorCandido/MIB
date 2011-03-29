@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="Blackbox.cs" />
     <Compile Include="Host.cs" />
+    <Compile Include="Pipeline\IPipelineContext.cs" />
+    <Compile Include="Pipeline\Pipeline.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

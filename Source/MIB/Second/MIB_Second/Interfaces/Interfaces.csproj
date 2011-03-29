@@ -51,11 +51,15 @@
     <Compile Include="ClientInformationTypes\ClientInformation.cs" />
     <Compile Include="Contracts\ClientInformationContract.cs" />
     <Compile Include="Contracts\EventContract.cs" />
+    <Compile Include="Contracts\IOperationContract.cs" />
+    <Compile Include="Contracts\RequestContract.cs" />
     <Compile Include="Contracts\SubscriptionContract.cs" />
     <Compile Include="Factories\ProxyFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ClientInformationTypes\TcpClientInformation.cs" />
     <Compile Include="ClientInformationTypes\TcpClientInformationAdapter.cs" />
+    <Compile Include="RequestHandling\IHandleRequest.cs" />
+    <Compile Include="Security\IAutentication.cs" />
     <Compile Include="Services\IBlackbox.cs" />
     <Compile Include="Services\IEmitter.cs" />
     <Compile Include="Services\IReceiver.cs" />

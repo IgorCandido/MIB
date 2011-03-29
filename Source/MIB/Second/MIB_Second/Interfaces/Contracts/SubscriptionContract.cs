@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Runtime.Serialization;
+using Interfaces.RequestHandling;
 
 namespace Interfaces.Contracts
 {
     [Serializable]
     [DataContract]
-    public class SubscriptionContract
+    public class SubscriptionContract : OperationContract
     {
 
         [DataMember]
@@ -19,5 +20,15 @@ namespace Interfaces.Contracts
             return "topic: " + Topic + ";";
         }
 
+        #region OperationContract
+
+        public override void HandleRequestVisit(IHandleRequest handler, object args)
+        {
+
+            handler.HandleRequest(this, args);
+
+        }
+
+        #endregion
     }
 }
