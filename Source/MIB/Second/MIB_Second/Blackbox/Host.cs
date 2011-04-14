@@ -11,16 +11,16 @@ namespace Blackbox
 
         static void Main(string[] args)
         {
-            Console.Title = "Second - Broker";
-            Console.WriteLine("Begin");
+            //Console.Title = "Second - Broker";
+            //Console.WriteLine("Begin");
 
-            ServiceHost svc = new ServiceHost(typeof(Blackbox));
+            //ServiceHost svc = new ServiceHost(typeof(Blackbox));
 
-            svc.Open();
+            //svc.Open();
 
-            Console.WriteLine("Press enter to conclude");
+            //Console.WriteLine("Press enter to conclude");
 
-            Console.ReadKey();
+            //Console.ReadKey();
 
         }
     }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Blackbox.Pipeline
 {
-    interface IPipelineContext
+    public interface IPipelineContext
     {
         
     }

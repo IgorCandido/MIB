@@ -2,28 +2,32 @@
 using System.Collections.Generic;
 using System.Linq;
 using Interfaces.Contracts;
+using Interfaces.ContractsFromClients;
+using Interfaces.ContractsInnerRepresentations;
 using Interfaces.RequestHandling;
 
 namespace Blackbox.Pipeline
 {
-    class Pipeline : IHandleRequest
+    public class Pipeline : IHandleRequest
     {
+
+        private List<IPipelineEventHandler> _eventHandlers;
 
         public event Action<IPipelineContext> Authentication;
 
         public event Action<IPipelineContext> Authorization;
 
-        public event Func<IPipelineContext, List<ClientInformationContract>> Match;
+        public event Func<Event,IPipelineContext, List<ClientInformationContract>> Match;
 
-        public event Action<IPipelineContext> Persist;
+        public event Action<Event,IPipelineContext> Persist;
 
-        public event Action<IPipelineContext> Forward;
+        public event Action<Event,IPipelineContext> Forward;
 
-        public event Action<IPipelineContext, List<ClientInformationContract>> Emit;
+        public event Action<Event,IPipelineContext, List<ClientInformationContract>> Emit;
 
-        public event Action<IPipelineContext> Subscribe;
+        public event Action<Subscription,IPipelineContext> Subscribe;
 
-        public event Action<IPipelineContext> Route;
+        public event Action<Subscription,IPipelineContext> Route;
 
         public void Process(OperationContract request)
         {
@@ -61,24 +65,14 @@ namespace Blackbox.Pipeline
 
         }
 
-        //
-        // Create default pipeline according to TODO: Definir critério para criar pipeline
-        //
-
-        public static Pipeline CreateDefaultPipeline()
-        {
-
-            return null;
-
-        }
-
+        
         #region Implementation of IHandleRequest
 
         //
         // Event handling
         //
 
-        public void HandleRequest(EventContract eventContract, object args)
+        public void HandleRequest(Event @event, object args)
         {
 
             IPipelineContext context = (IPipelineContext) args;
@@ -92,7 +86,7 @@ namespace Blackbox.Pipeline
             if( Match != null )
             {
 
-                clients = Match(context);
+                clients = Match(@event,context);
 
             }
 
@@ -103,7 +97,7 @@ namespace Blackbox.Pipeline
             if( Persist != null )
             {
 
-                Persist(context);
+                Persist(@event,context);
 
             }
 
@@ -114,7 +108,7 @@ namespace Blackbox.Pipeline
             if( Forward != null )
             {
 
-                Forward(context);
+                Forward(@event,context);
 
             }
 
@@ -125,7 +119,7 @@ namespace Blackbox.Pipeline
             if( Emit != null)
             {
 
-                Emit(context, clients);
+                Emit(@event,context, clients);
 
             }
 
@@ -135,7 +129,7 @@ namespace Blackbox.Pipeline
         // Subscription handling
         //
 
-        public void HandleRequest(SubscriptionContract subscriptionContract, object args)
+        public void HandleRequest(Subscription subscription, object args)
         {
 
             IPipelineContext context = (IPipelineContext) args;
@@ -147,7 +141,7 @@ namespace Blackbox.Pipeline
             if( Subscribe != null )
             {
 
-                Subscribe(context);
+                Subscribe(subscription,context);
 
             }
 
@@ -158,7 +152,7 @@ namespace Blackbox.Pipeline
             if( Route != null )
             {
 
-                Route(context);
+                Route(subscription,context);
 
             }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using Interfaces.Contracts;
+using Interfaces.ContractsFromClients;
 
 namespace Interfaces.ClientInformationTypes
 {

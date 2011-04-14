@@ -1,6 +1,8 @@
 ﻿using System;
 using System.ServiceModel;
 using Interfaces.Contracts;
+using Interfaces.ContractsFromClients;
+using Interfaces.ContractsInnerRepresentations;
 
 namespace Interfaces.Services
 {
@@ -9,10 +11,6 @@ namespace Interfaces.Services
     {
 
         [OperationContract]
-        void Receive(String topic, object data);
-
-        [OperationContract]
-        void Subscribe(String topic, ClientInformationContract clientInformation);
-
+        void Process(OperationContract operation);
     }
 }

@@ -5,6 +5,8 @@ using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.ServiceModel;
 using Interfaces.Contracts;
+using Interfaces.ContractsFromClients;
+using Interfaces.ContractsInnerRepresentations;
 using Interfaces.Factories;
 using Interfaces.Services;
 using Interfaces.Tcp;
@@ -16,13 +18,34 @@ namespace TcpReceiver
     public class TcpReceiver : IReceiver
     {
 
-        private static readonly IBlackbox Blackbox = 
-            ProxyFactory.GetProxy<IBlackbox>("blackbox");
+        private static IBlackbox _blackbox;
 
-        private readonly TcpListener _listener = new TcpListener(int.Parse(ConfigurationManager.AppSettings["PortNumber"]));
+        private TcpListener _listener;
 
         public TcpReceiver()
         {
+
+            _blackbox = ProxyFactory.GetProxy<IBlackbox>("blackbox");
+
+            InitiateListenerThread();
+
+        }
+
+        public TcpReceiver(IBlackbox blackbox, int portNumber)
+        {
+
+            _blackbox = blackbox;
+
+            InitiateListenerThread(portNumber);
+
+        }
+
+        private void InitiateListenerThread(int? port = null)
+        {
+
+            int portNumber = port ?? int.Parse(ConfigurationManager.AppSettings["PortNumber"]);
+
+            _listener = new TcpListener(portNumber);
 
             _listener.Start();
 
@@ -36,7 +59,7 @@ namespace TcpReceiver
         public void Receive(EventContract eventContract)
         {
             
-            Blackbox.Receive(eventContract.Topic, eventContract.Data);
+            _blackbox.Process(new Event(eventContract));
 
         }
 
@@ -45,7 +68,7 @@ namespace TcpReceiver
         public void Subscribe(SubscriptionContract subscriptionContract)
         {
             
-            Blackbox.Subscribe(subscriptionContract.Topic, subscriptionContract.ClientInformation);
+            _blackbox.Process(new Subscription(subscriptionContract));
 
         }
 
@@ -79,7 +102,7 @@ namespace TcpReceiver
                         if( ( eventObj = formatter.Deserialize(deserializationStream) as EventContract ) != null )
                         {
                             
-                            Blackbox.Receive(eventObj.Topic, eventObj.Data);
+                            _blackbox.Process(new Event(eventObj));
 
                         }
 
@@ -92,7 +115,7 @@ namespace TcpReceiver
                         if ((subscription = formatter.Deserialize(deserializationStream) as SubscriptionContract) != null)
                         {
 
-                            Blackbox.Subscribe(subscription.Topic, subscription.ClientInformation);
+                            _blackbox.Process(new Subscription(subscription));
 
                         }
 

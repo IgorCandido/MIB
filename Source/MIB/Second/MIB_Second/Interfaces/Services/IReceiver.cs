@@ -1,5 +1,6 @@
 ﻿using System.ServiceModel;
 using Interfaces.Contracts;
+using Interfaces.ContractsFromClients;
 
 namespace Interfaces.Services
 {

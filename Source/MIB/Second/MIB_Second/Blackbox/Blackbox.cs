@@ -1,76 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.ServiceModel;
+using Blackbox.Handlers;
+using Blackbox.SubscriptionsTree;
 using Interfaces.Contracts;
+using Interfaces.ContractsFromClients;
+using Interfaces.ContractsInnerRepresentations;
 using Interfaces.Factories;
-using Interfaces.Services;
+using Interfaces.Services; 
 
 namespace Blackbox
 {
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, ConcurrencyMode = ConcurrencyMode.Multiple)]
     public class Blackbox : IBlackbox
     {
 
-        Hashtable subscriptionsTable = new Hashtable(); 
-        Hashtable emittersTable = new Hashtable();
+        private Hashtable emittersTable = new Hashtable();
+        private Pipeline.Pipeline pipeline;
 
         public Blackbox()
         {
 
             emittersTable["TCP"] = ProxyFactory.GetProxy<IEmitter>("tcpEmitter");
+            pipeline = Pipeline.PipelineFactory.CreatePipeline(new MatchingSubscribe(emittersTable));
 
         }
 
         #region Implementation of IBlackbox
 
-        public void Receive(string topic, object data)
+        public void Process(OperationContract operation)
         {
-            List<ClientInformationContract> subscriptions;
-
             
-            if ((subscriptions = (subscriptionsTable[topic]) as List<ClientInformationContract>) != null)
-            {
+            pipeline.Process(operation);
 
-                IEmitter emitter;
-
-                foreach (ClientInformationContract clientInformation in subscriptions)
-                {
-                    
-                     if( ( emitter = emittersTable[clientInformation.EmitterType] as IEmitter ) != null )
-                     {
-                         
-                         emitter.Emit(clientInformation, data);
-
-                     }
-
-                }
-                
-
-            }
         }
-
-        public void Subscribe(string topic, ClientInformationContract clientInformation)
-        {
-
-            List<ClientInformationContract> subscriptions;
-
-            if ((subscriptions = (subscriptionsTable[topic]) as List<ClientInformationContract>) == null)
-            {
-
-                subscriptions = new List<ClientInformationContract>();
-
-                subscriptionsTable[topic] = subscriptions;
-
-            }
-
-            if (!subscriptions.Contains(clientInformation))
-            {
-
-                subscriptions.Add(clientInformation);
-
-            }
-        }
-
+        
         #endregion
     }
 }

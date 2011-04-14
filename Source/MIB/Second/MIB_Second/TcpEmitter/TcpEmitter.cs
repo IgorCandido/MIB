@@ -2,6 +2,7 @@
 using System.Net.Sockets;
 using Interfaces.ClientInformationTypes;
 using Interfaces.Contracts;
+using Interfaces.ContractsFromClients;
 using Interfaces.Services;
 
 namespace TcpEmitter

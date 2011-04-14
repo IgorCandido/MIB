@@ -4,6 +4,7 @@ using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 using Interfaces.ClientInformationTypes;
 using Interfaces.Contracts;
+using Interfaces.ContractsFromClients;
 using Interfaces.Factories;
 using Interfaces.Services;
 using Interfaces.Tcp;
@@ -28,8 +29,8 @@ namespace TcpClient
 
             SubscriptionContract subscription = new SubscriptionContract()
                                                     {
-                                                        ClientInformation = TcpClientInformationAdapter.SerializeToClientInformation(info), 
-                                                        Topic = "teste"
+                                                        ClientInformation = TcpClientInformationAdapter.SerializeToClientInformation(info),
+                                                        ContentDescription = @"<description><color>black</color></description>"
                                                     };
 
             Console.WriteLine("Press enter to make the following subscription: {0}", subscription);
@@ -68,7 +69,8 @@ namespace TcpClient
 
             //receiver.Receive(new EventContract() {topic = "teste" , data = stream.GetBuffer()});
 
-            EventContract eventObj = new EventContract() { Topic = "teste", Data = stream.GetBuffer() };
+            EventContract eventObj = new EventContract() { ContentDescription = @"<description><color>black</color></description>", 
+                                                           Data = stream.GetBuffer() }; 
 
             stream = new MemoryStream();
 

@@ -3,7 +3,7 @@
 namespace Interfaces.ClientInformationTypes
 {
 
-    public class ClientInformation
+    public abstract class ClientInformation
     {
 
         public String EmitterType { get; set; }
