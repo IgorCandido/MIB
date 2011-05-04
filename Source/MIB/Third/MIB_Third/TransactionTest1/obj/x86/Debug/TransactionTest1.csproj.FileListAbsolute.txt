@@ -1,0 +1,6 @@
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Third\MIB_Third\TransactionTest1\bin\Debug\TransactionTest1.exe
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Third\MIB_Third\TransactionTest1\bin\Debug\TransactionTest1.pdb
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Third\MIB_Third\TransactionTest1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Third\MIB_Third\TransactionTest1\obj\x86\Debug\TransactionTest1.exe
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Third\MIB_Third\TransactionTest1\obj\x86\Debug\TransactionTest1.pdb
+C:\Igor\Isel\Semestres\Projecto Mestrado\MIB\Source\MIB\Third\MIB_Third\TransactionTest1\bin\Debug\TransactionTest1.exe.config

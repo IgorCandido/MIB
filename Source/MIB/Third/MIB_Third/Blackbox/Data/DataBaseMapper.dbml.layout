@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataBaseMapper">
+  <DataContextMoniker Name="/DataBaseMapperDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3f5565e7-1d79-4261-a731-16b185b3bf6e" absoluteBounds="0.75, 0.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DataBaseMapperDataContext/Event" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7468343a-0b63-450f-ada5-075da02541c8" absoluteBounds="0.765, 1.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="881bf6c7-dfa5-4286-8ba6-6e2dd1235e5d" absoluteBounds="3.5, 3.125, 2, 1.193992513020834">
+      <DataClassMoniker Name="/DataBaseMapperDataContext/Subscription" />
+      <nestedChildShapes>
+        <elementListCompartment Id="45d9a399-fce2-4005-9422-0a6603a30e35" absoluteBounds="3.515, 3.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f29ebf0c-894e-4ada-902e-db2000b6482f" absoluteBounds="3.5, 0.875, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DataBaseMapperDataContext/Event_Subscription" />
+      <nestedChildShapes>
+        <elementListCompartment Id="297e5b08-09b0-46fc-a066-0a98b7c44410" absoluteBounds="3.515, 1.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.47199625651042); (3.5 : 1.47199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataBaseMapperDataContext/Event/Event_Event_Subscription" />
+      <nodes>
+        <classShapeMoniker Id="3f5565e7-1d79-4261-a731-16b185b3bf6e" />
+        <classShapeMoniker Id="f29ebf0c-894e-4ada-902e-db2000b6482f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 3.125); (4.5 : 2.06899251302083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataBaseMapperDataContext/Subscription/Subscription_Event_Subscription" />
+      <nodes>
+        <classShapeMoniker Id="881bf6c7-dfa5-4286-8ba6-6e2dd1235e5d" />
+        <classShapeMoniker Id="f29ebf0c-894e-4ada-902e-db2000b6482f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

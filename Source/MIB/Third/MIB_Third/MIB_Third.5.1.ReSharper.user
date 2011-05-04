@@ -1,0 +1,513 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="typeof" priority="0" />
+      <Item value="Transaction`0" priority="9" />
+      <Item value="new" priority="57" />
+      <Item value="MemoryStream" priority="2" />
+      <Item value="formatter" priority="3" />
+      <Item value="mem" priority="2" />
+      <Item value="tran" priority="4" />
+      <Item value="Console`0" priority="3" />
+      <Item value="StreamReader`0" priority="0" />
+      <Item value="StreamReader" priority="0" />
+      <Item value="str" priority="0" />
+      <Item value="BinaryFormatter`0" priority="0" />
+      <Item value="tcp" priority="0" />
+      <Item value="TransactionInterop`0" priority="5" />
+      <Item value="propagation" priority="3" />
+      <Item value="Length" priority="2" />
+      <Item value="client" priority="2" />
+      <Item value="Stream`0" priority="0" />
+      <Item value="clientStream" priority="2" />
+      <Item value="BinaryReader" priority="0" />
+      <Item value="int" priority="13" />
+      <Item value="dimension" priority="0" />
+      <Item value="BinaryWriter`0" priority="0" />
+      <Item value="BinaryWriter" priority="0" />
+      <Item value="serverStream" priority="1" />
+      <Item value="TestDataContext`0" priority="1" />
+      <Item value="TestDataContext" priority="1" />
+      <Item value="testContext" priority="0" />
+      <Item value="TestTable" priority="0" />
+      <Item value="IntValue" priority="0" />
+      <Item value="test" priority="1" />
+      <Item value="Test" priority="5" />
+      <Item value="Key" priority="0" />
+      <Item value="TestColumn" priority="0" />
+      <Item value="using" priority="13" />
+      <Item value="TransactionScope`0" priority="3" />
+      <Item value="TransactionScope" priority="4" />
+      <Item value="TransactionScopeOption`0" priority="1" />
+      <Item value="ts" priority="1" />
+      <Item value="RepeatableRead" priority="0" />
+      <Item value="CommittableTransaction`0" priority="0" />
+      <Item value="CommittableTransaction" priority="0" />
+      <Item value="TransactionOptions`0" priority="1" />
+      <Item value="TransactionOptions" priority="0" />
+      <Item value="IsolationLevel" priority="0" />
+      <Item value="IsolationLevel`0" priority="0" />
+      <Item value="to" priority="1" />
+      <Item value="Subscription`0" priority="25" />
+      <Item value="IPipelineContext`0" priority="0" />
+      <Item value="private" priority="12" />
+      <Item value="void" priority="20" />
+      <Item value="Authenticate`0" priority="0" />
+      <Item value="Authorize`0" priority="0" />
+      <Item value="out" priority="6" />
+      <Item value="clients" priority="0" />
+      <Item value="subscriptions" priority="7" />
+      <Item value="public" priority="27" />
+      <Item value="bool" priority="11" />
+      <Item value="emittersTable" priority="3" />
+      <Item value="Pipeline`0" priority="3" />
+      <Item value="Hashtable`0" priority="4" />
+      <Item value="_emittersTable" priority="1" />
+      <Item value="matchingSubscriptions" priority="0" />
+      <Item value="sub" priority="4" />
+      <Item value="if" priority="13" />
+      <Item value="ClientInformationContract`0" priority="3" />
+      <Item value="clientInformation" priority="0" />
+      <Item value="subscription" priority="31" />
+      <Item value="byte" priority="4" />
+      <Item value="List" priority="18" />
+      <Item value="a" priority="0" />
+      <Item value="_root" priority="0" />
+      <Item value="return" priority="14" />
+      <Item value="Value" priority="0" />
+      <Item value="To" priority="2" />
+      <Item value="null" priority="13" />
+      <Item value="Subscriptions" priority="0" />
+      <Item value="List&lt;Subscription&gt;" priority="2" />
+      <Item value="foreach" priority="9" />
+      <Item value="unionSubscription" priority="4" />
+      <Item value="childNode" priority="0" />
+      <Item value="Link`0" priority="1" />
+      <Item value="DontCareLink" priority="2" />
+      <Item value="subscriptionTree" priority="17" />
+      <Item value="Pipeline" priority="1" />
+      <Item value="emitters" priority="1" />
+      <Item value="i1" priority="2" />
+      <Item value="Union`1" priority="0" />
+      <Item value="i2" priority="0" />
+      <Item value="sub1" priority="5" />
+      <Item value="sub2" priority="2" />
+      <Item value="sub3" priority="0" />
+      <Item value="sub4" priority="0" />
+      <Item value="Assert`0" priority="12" />
+      <Item value="actual" priority="12" />
+      <Item value="subTree" priority="0" />
+      <Item value="contains" priority="5" />
+      <Item value="subscriptionAttributes" priority="0" />
+      <Item value="false" priority="4" />
+      <Item value="SubscriptionTree`0" priority="10" />
+      <Item value="_subscriptionTree" priority="1" />
+      <Item value="SubscriptionTree" priority="7" />
+      <Item value="static" priority="8" />
+      <Item value="DataBaseMapperDataContext`0" priority="8" />
+      <Item value="DataBaseMapperDataContext" priority="6" />
+      <Item value="db" priority="25" />
+      <Item value="Data" priority="1" />
+      <Item value="BuildSubscriptionTreeFromDataBase`0" priority="0" />
+      <Item value="Add`0" priority="0" />
+      <Item value="Blackbox`0" priority="0" />
+      <Item value="this" priority="3" />
+      <Item value="Interfaces" priority="7" />
+      <Item value="ContractsInnerRepresentations" priority="10" />
+      <Item value="Subscription" priority="10" />
+      <Item value="SubscriptionData" priority="0" />
+      <Item value="binaryFormatter" priority="0" />
+      <Item value="BinaryFormatter" priority="1" />
+      <Item value="memoryStream" priority="2" />
+      <Item value="SubscriptionHash" priority="0" />
+      <Item value="subscriptionDb" priority="2" />
+      <Item value="override" priority="0" />
+      <Item value="TestFixture" priority="0" />
+      <Item value="x" priority="0" />
+      <Item value="y" priority="0" />
+      <Item value="Hashtable" priority="3" />
+      <Item value="Construct`0" priority="3" />
+      <Item value="String`0" priority="2" />
+      <Item value="MD5`0" priority="0" />
+      <Item value="md5Hasher" priority="0" />
+      <Item value="m" priority="4" />
+      <Item value="Serializable" priority="0" />
+      <Item value="Equals`0" priority="0" />
+      <Item value="for" priority="0" />
+      <Item value="i" priority="3" />
+      <Item value="current" priority="2" />
+      <Item value="value" priority="1" />
+      <Item value="GetNumber`0" priority="0" />
+      <Item value="_hashCode" priority="1" />
+      <Item value="subscriptionContract" priority="0" />
+      <Item value="Unsubscribe" priority="0" />
+      <Item value="Persist" priority="1" />
+      <Item value="MIB_DAL`0" priority="18" />
+      <Item value="Microsoft" priority="0" />
+      <Item value="TestFixtureSetUp" priority="0" />
+      <Item value="contact" priority="0" />
+      <Item value="SetUp" priority="0" />
+      <Item value="AddMultipleSubscriptions`0" priority="0" />
+      <Item value="TestMIBDAL`0" priority="0" />
+      <Item value="expected" priority="2" />
+      <Item value="Exception`0" priority="3" />
+      <Item value="try" priority="9" />
+      <Item value="catch" priority="1" />
+      <Item value="e" priority="0" />
+      <Item value="error" priority="0" />
+      <Item value="throw" priority="1" />
+      <Item value="DeleteSubscription`0" priority="0" />
+      <Item value="Event`0" priority="15" />
+      <Item value="event_sub" priority="5" />
+      <Item value="Event_Subscription`0" priority="2" />
+      <Item value="eventId" priority="2" />
+      <Item value="event" priority="31" />
+      <Item value="@event" priority="2" />
+      <Item value="EventData" priority="0" />
+      <Item value="EventHash" priority="0" />
+      <Item value="Event_Subscription" priority="0" />
+      <Item value="Event" priority="1" />
+      <Item value="subscriptionsToPersist" priority="1" />
+      <Item value="else" priority="2" />
+      <Item value="ConnectionToDataBaseException" priority="2" />
+      <Item value="EliminateEventIfThereArentMoreSubscriptionsForIt`0" priority="1" />
+      <Item value="DBNull`0" priority="0" />
+      <Item value="eventSub" priority="0" />
+      <Item value="eventSubscription" priority="1" />
+      <Item value="Emit`0" priority="3" />
+      <Item value="true" priority="3" />
+      <Item value="transactionScope" priority="5" />
+      <Item value="transactionFromReceiver" priority="2" />
+      <Item value="ThreadStaticAttribute`0" priority="0" />
+      <Item value="pipe" priority="3" />
+      <Item value="emitter" priority="0" />
+      <Item value="transaction" priority="2" />
+      <Item value="EmittMockDelegate`0" priority="0" />
+      <Item value="eventHashCode" priority="0" />
+      <Item value="retreviedEvent" priority="1" />
+      <Item value="mocks" priority="0" />
+      <Item value="RequiresThreadAttribute`0" priority="0" />
+      <Item value="TimeSpan" priority="0" />
+      <Item value="Thread`0" priority="0" />
+      <Item value="ThreadStart" priority="1" />
+      <Item value="ParameterizedThreadStart`0" priority="0" />
+      <Item value="object" priority="0" />
+      <Item value="WaitCallback`0" priority="1" />
+      <Item value="while" priority="1" />
+      <Item value="wait" priority="0" />
+      <Item value="TransactionAbortedException`0" priority="0" />
+      <Item value="IFormatProvider`0" priority="0" />
+      <Item value="TestSubscriptionTree`0" priority="0" />
+      <Item value="tree" priority="0" />
+      <Item value="subscription1" priority="1" />
+      <Item value="data" priority="0" />
+      <Item value="eventReceived" priority="1" />
+      <Item value="XDocument`0" priority="1" />
+      <Item value="string" priority="0" />
+      <Item value="contentDescription" priority="1" />
+      <Item value="GetContentDescriptionRepresentation`0" priority="0" />
+      <Item value="ContentDescription" priority="0" />
+      <Item value="Childreen" priority="1" />
+      <Item value="INode`0" priority="3" />
+      <Item value="childRemoval" priority="1" />
+      <Item value="subscriptionValueAttribute" priority="0" />
+      <Item value="ITreeElement`0" priority="3" />
+      <Item value="Attributes" priority="2" />
+      <Item value="CaseInsensitiveHashCodeProvider`0" priority="0" />
+      <Item value="copy" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.Serialization.XmlSerializer">
+      <Item value="Serialize`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Transactions.Transaction">
+      <Item value="Current" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="WriteLine`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.StreamReader">
+      <Item value="ReadToEnd`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.MemoryStream">
+      <Item value="Position" priority="0" />
+      <Item value="ToArray`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.Sockets.TcpClient">
+      <Item value="GetStream`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.Sockets.NetworkStream">
+      <Item value="Write`0" priority="0" />
+      <Item value="Read`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Transactions.TransactionInterop">
+      <Item value="GetDtcTransaction`0" priority="0" />
+      <Item value="GetTransmitterPropagationToken`0" priority="1" />
+      <Item value="GetTransactionFromTransmitterPropagationToken`0" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.BinaryReader">
+      <Item value="ReadInt32`0" priority="0" />
+      <Item value="ReadBytes`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.BinaryWriter">
+      <Item value="Write`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TransactionTest1.TestDataContext">
+      <Item value="TestTables" priority="0" />
+      <Item value="Tests" priority="0" />
+      <Item value="SubmitChanges`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Linq.Table`1">
+      <Item value="InsertOnSubmit`0" priority="4" />
+      <Item value="ToList`1" priority="0" />
+      <Item value="InsertAllOnSubmit`1" priority="0" />
+      <Item value="Select`2" priority="3" />
+      <Item value="DeleteOnSubmit`0" priority="2" />
+      <Item value="FirstOrDefault`1" priority="1" />
+      <Item value="Where`1" priority="5" />
+      <Item value="SingleOrDefault`1" priority="3" />
+      <Item value="Contains`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Transactions.TransactionScopeOption">
+      <Item value="Required" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Transactions.Transaction">
+      <Item value="Rollback`0" priority="3" />
+      <Item value="IsolationLevel" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Transactions.IsolationLevel">
+      <Item value="RepeatableRead" priority="2" />
+      <Item value="Snapshot" priority="1" />
+      <Item value="ReadCommitted" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Select`2" priority="1" />
+      <Item value="Where`1" priority="0" />
+      <Item value="Union`1" priority="0" />
+      <Item value="Count" priority="3" />
+      <Item value="Contains`0" priority="9" />
+      <Item value="TrueForAll`0" priority="1" />
+      <Item value="ForEach`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Interfaces.ContractsInnerRepresentations.Subscription">
+      <Item value="Persist" priority="2" />
+      <Item value="GetHashCode`0" priority="7" />
+      <Item value="Map`0" priority="0" />
+      <Item value="_hashCode" priority="1" />
+      <Item value="Unsubscribe" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Blackbox.SubscriptionsTree.INode">
+      <Item value="VisitGetAll`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Hashtable">
+      <Item value="SyncRoot" priority="0" />
+      <Item value="Values" priority="0" />
+      <Item value="Add`0" priority="0" />
+      <Item value="GetEnumerator`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Blackbox.SubscriptionsTree.Link">
+      <Item value="VisitGetAll`0" priority="1" />
+      <Item value="To" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Blackbox.SubscriptionsTree.SubscriptionTree">
+      <Item value="GetAll`0" priority="4" />
+      <Item value="Add`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="ToList`1" priority="3" />
+      <Item value="ToArray`1" priority="0" />
+      <Item value="Cast`1" priority="0" />
+      <Item value="Count`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NUnit.Framework.Assert">
+      <Item value="AreEqual`0" priority="4" />
+      <Item value="True`0" priority="5" />
+      <Item value="False`0" priority="1" />
+      <Item value="NotNull`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Blackbox.Data.DataBaseMapperDataContext">
+      <Item value="Subscriptions" priority="7" />
+      <Item value="SubmitChanges`0" priority="5" />
+      <Item value="Event_Subscriptions" priority="6" />
+      <Item value="Events" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Blackbox.Data.MIB_DAL">
+      <Item value="GetAllSubscriptions`0" priority="9" />
+      <Item value="SaveSubscriptions`0" priority="3" />
+      <Item value="DeleteSubscription`0" priority="7" />
+      <Item value="SaveEventWithSubscriptions`0" priority="0" />
+      <Item value="EliminateTheInterestOfAnSubscriptionToAnEvent`0" priority="1" />
+      <Item value="GetEventsPersisted`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter">
+      <Item value="Serialize`0" priority="2" />
+      <Item value="Deserialize`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Blackbox.Data.Subscription">
+      <Item value="SubscriptionData" priority="0" />
+      <Item value="Map`0" priority="0" />
+      <Item value="SubscriptionHash" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Linq.Binary">
+      <Item value="ToArray`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="GetHashCode`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Security.Cryptography.MD5">
+      <Item value="Create`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Security.Cryptography.MD5">
+      <Item value="ComputeHash`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Interfaces.ContractsFromClients.SubscriptionContract">
+      <Item value="ContentDescription" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="GetHashCode`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.SqlClient.SqlException">
+      <Item value="Errors" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Blackbox.Data.Event_Subscription">
+      <Item value="Subscription" priority="3" />
+      <Item value="Event" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="Count`1" priority="1" />
+      <Item value="Select`2" priority="1" />
+      <Item value="ToArray`1" priority="0" />
+      <Item value="ToList`1" priority="0" />
+      <Item value="Cast`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Blackbox.Data.Event">
+      <Item value="EventHash" priority="2" />
+      <Item value="EventData" priority="0" />
+      <Item value="Map`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Interfaces.ContractsInnerRepresentations.Event">
+      <Item value="GetHashCode`0" priority="4" />
+      <Item value="propagationToken" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Transactions.TransactionScope">
+      <Item value="Complete`0" priority="2" />
+      <Item value="Dispose`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Blackbox.Pipeline.Pipeline">
+      <Item value="Process`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Rhino.Mocks.Interfaces.IRepeat`1">
+      <Item value="Once`0" priority="0" />
+      <Item value="Times`0" priority="0" />
+      <Item value="Any`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Rhino.Mocks.Interfaces.IMethodOptions`1">
+      <Item value="Do`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Rhino.Mocks.MockRepository">
+      <Item value="VerifyAll`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="Sleep`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Thread">
+      <Item value="Start`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="MaxValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Boolean">
+      <Item value="ToString`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Xml.Linq.XDocument">
+      <Item value="Parse`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Interfaces.ContractsInnerRepresentations.ContentDescriptionParser">
+      <Item value="GetContentDescriptionRepresentation`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.Linq.XDocument">
+      <Item value="ToString`0" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="77B783FD-E393-4340-BE83-98C5A08BF014/f:TcpReceiver.cs" caret="0" fromTop="0" />
+      <File id="d:Miscellaneous Files/f:System.Transactions.CommittableTransaction.cs/l:C!?Igor?Isel?Semestres?Projecto Mestrado?MIB?Source?MIB?Third?MIB_Third?_ReSharper.MIB_Third?DecompilerCache?metadata?System.Transactions-1fd0?System.Transactions.CommittableTransaction.cs" caret="415" fromTop="10" />
+      <File id="19B9613E-9556-49BA-A2C7-B0760C1CA921/d:RequestHandling/f:IHandleRequest.cs" caret="272" fromTop="10" />
+      <File id="19B9613E-9556-49BA-A2C7-B0760C1CA921/d:ContractsFromClients/f:ClientInformationContract.cs" caret="360" fromTop="8" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:INode.cs" caret="0" fromTop="0" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:AddAlgorithm.cs" caret="514" fromTop="0" />
+      <File id="349AD4F1-3613-4148-B2EA-40E401B020BA/d:TCP/f:TestTcpReceiver.cs" caret="0" fromTop="0" />
+      <File id="19B9613E-9556-49BA-A2C7-B0760C1CA921/d:ContractsInnerRepresentations/f:ContentDescriptionAttribute.cs" caret="164" fromTop="7" />
+      <File id="19B9613E-9556-49BA-A2C7-B0760C1CA921/d:Exceptions/d:DataBase/f:ConnectionToDataBaseException.cs" caret="148" fromTop="7" />
+      <File id="349AD4F1-3613-4148-B2EA-40E401B020BA/d:Blackbox/f:TestMIBDAL.cs" caret="2035" fromTop="10" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/f:Blackbox.cs" caret="1297" fromTop="17" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:Data/f:SubscriptionMapper.cs" caret="254" fromTop="12" />
+      <File id="44DBCA66-7B03-41AF-A9D0-D3D635B5B806/f:Program.cs" caret="2656" fromTop="50" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:Data/f:EventMapper.cs" caret="910" fromTop="18" />
+      <File id="19B9613E-9556-49BA-A2C7-B0760C1CA921/d:ContractsInnerRepresentations/f:OperationContract.cs" caret="534" fromTop="10" />
+      <File id="19B9613E-9556-49BA-A2C7-B0760C1CA921/d:Services/f:IEmitter.cs" caret="238" fromTop="10" />
+      <File id="19B9613E-9556-49BA-A2C7-B0760C1CA921/d:ContractsInnerRepresentations/f:ContentDescriptionParser.cs" caret="521" fromTop="16" />
+      <File id="349AD4F1-3613-4148-B2EA-40E401B020BA/d:Blackbox/f:TestSubscriptionTree.cs" caret="5736" fromTop="18" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:ITreeElement.cs" caret="561" fromTop="16" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:NodeLeaf.cs" caret="1965" fromTop="24" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:Data/f:MIB_DAL.cs" caret="7368" fromTop="10" />
+      <File id="19B9613E-9556-49BA-A2C7-B0760C1CA921/d:ContractsInnerRepresentations/f:Subscription.cs" caret="1228" fromTop="9" />
+      <File id="19B9613E-9556-49BA-A2C7-B0760C1CA921/d:ContractsInnerRepresentations/f:Event.cs" caret="697" fromTop="10" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:SubscriptionTree.cs" caret="2155" fromTop="10" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:Link.cs" caret="2422" fromTop="11" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:NodeCondition.cs" caret="5802" fromTop="9" />
+      <File id="349AD4F1-3613-4148-B2EA-40E401B020BA/d:Blackbox/f:TestPipeline.cs" caret="5752" fromTop="10" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:Pipeline/f:Pipeline.cs" caret="3065" fromTop="13" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="349AD4F1-3613-4148-B2EA-40E401B020BA/d:Blackbox/f:TestPipeline.cs" caret="5752" fromTop="25" />
+      <File id="349AD4F1-3613-4148-B2EA-40E401B020BA/d:Blackbox/f:TestPipeline.cs" caret="1459" fromTop="14" />
+      <File id="349AD4F1-3613-4148-B2EA-40E401B020BA/d:Blackbox/f:TestPipeline.cs" caret="1614" fromTop="11" />
+      <File id="349AD4F1-3613-4148-B2EA-40E401B020BA/d:Blackbox/f:TestPipeline.cs" caret="2661" fromTop="18" />
+      <File id="349AD4F1-3613-4148-B2EA-40E401B020BA/d:Blackbox/f:TestPipeline.cs" caret="2798" fromTop="22" />
+      <File id="19B9613E-9556-49BA-A2C7-B0760C1CA921/d:ContractsInnerRepresentations/f:ContentDescriptionParser.cs" caret="1002" fromTop="27" />
+      <File id="19B9613E-9556-49BA-A2C7-B0760C1CA921/d:ContractsInnerRepresentations/f:ContentDescriptionParser.cs" caret="521" fromTop="10" />
+      <File id="19B9613E-9556-49BA-A2C7-B0760C1CA921/d:ContractsInnerRepresentations/f:Subscription.cs" caret="978" fromTop="17" />
+      <File id="349AD4F1-3613-4148-B2EA-40E401B020BA/d:Blackbox/f:TestPipeline.cs" caret="2182" fromTop="11" />
+      <File id="349AD4F1-3613-4148-B2EA-40E401B020BA/d:Blackbox/f:TestPipeline.cs" caret="2394" fromTop="12" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:NodeCondition.cs" caret="5456" fromTop="31" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:NodeCondition.cs" caret="5334" fromTop="29" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:NodeCondition.cs" caret="5154" fromTop="24" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:NodeCondition.cs" caret="5315" fromTop="23" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:NodeCondition.cs" caret="4963" fromTop="24" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:NodeCondition.cs" caret="4231" fromTop="23" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:NodeCondition.cs" caret="4517" fromTop="22" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:ITreeElement.cs" caret="560" fromTop="12" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:Link.cs" caret="324" fromTop="11" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:Link.cs" caret="795" fromTop="6" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:NodeCondition.cs" caret="3025" fromTop="13" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:NodeCondition.cs" caret="3934" fromTop="10" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:Link.cs" caret="2209" fromTop="21" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:NodeCondition.cs" caret="4961" fromTop="16" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:NodeLeaf.cs" caret="290" fromTop="9" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:NodeLeaf.cs" caret="1538" fromTop="14" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:NodeLeaf.cs" caret="1965" fromTop="24" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:SubscriptionTree.cs" caret="1968" fromTop="10" />
+      <File id="349AD4F1-3613-4148-B2EA-40E401B020BA/d:Blackbox/f:TestPipeline.cs" caret="19265" fromTop="17" />
+      <File id="C7A47328-0578-47A4-BFDB-13ADE55F02E6/d:SubscriptionsTree/f:NodeCondition.cs" caret="5802" fromTop="9" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files\NUnit 2.5.10\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

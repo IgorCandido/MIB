@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MIB" Class="DataBaseMapperDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=xrelishx\relish_one;Initial Catalog=MIB;Integrated Security=True" SettingsObjectName="Blackbox.Properties.Settings" SettingsPropertyName="MIBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Event" Member="Events">
+    <Type Name="Event">
+      <Column Name="EventHash" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Event" Member="EventData" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="Event_Event_Subscription" Member="Event_Subscriptions" ThisKey="EventHash" OtherKey="Event" Type="Event_Subscription" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Subscription" Member="Subscriptions">
+    <Type Name="Subscription">
+      <Column Name="SubscriptionHash" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Subscription" Member="SubscriptionData" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="Subscription_Event_Subscription" Member="Event_Subscriptions" ThisKey="SubscriptionHash" OtherKey="Subscription" Type="Event_Subscription" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Event_Subscription" Member="Event_Subscriptions">
+    <Type Name="Event_Subscription">
+      <Column Name="Event" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Subscription" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Event_Event_Subscription" Member="Event1" ThisKey="Event" OtherKey="EventHash" Type="Event" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Subscription_Event_Subscription" Member="Subscription1" ThisKey="Subscription" OtherKey="SubscriptionHash" Type="Subscription" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>
